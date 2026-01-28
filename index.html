@@ -544,6 +544,173 @@
         }
 
         /* ==========================================
+           LEAD CAPTURE FORM
+           ========================================== */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .contact-info p {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-method-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-method-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+        }
+
+        .contact-method-text h4 {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .contact-method-text p,
+        .contact-method-text a {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .contact-method-text a:hover {
+            color: var(--primary);
+        }
+
+        .lead-form {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+
+        .lead-form h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .lead-form > p {
+            color: var(--gray-600);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        .form-submit {
+            margin-top: 24px;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+
+        .form-success {
+            display: none;
+            background: #d1fae5;
+            border: 1px solid var(--accent);
+            color: #065f46;
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .form-success.show {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* ==========================================
            FOOTER
            ========================================== */
         footer {
@@ -799,14 +966,113 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section" id="contact">
+    <!-- Contact / Lead Capture -->
+    <section class="contact-section" id="contact">
         <div class="container">
-            <h2 class="fade-in">Ready to Digitize Your Records?</h2>
-            <p class="fade-in">Let's discuss how ECB, TX LLC can help your county preserve septic history and improve compliance.</p>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h2>Let's Talk About Your Records</h2>
+                    <p>Ready to modernize your county's septic records? Schedule a free consultation to discuss your needs and get a custom quote.</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Email</h4>
+                                <a href="mailto:info@ecbtx.com">info@ecbtx.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Service Area</h4>
+                                <p>Texas Hill Country & Beyond</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon" style="background: var(--accent);">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Response Time</h4>
+                                <p>We reply within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lead-form fade-in">
+                    <h3>Request a Free Consultation</h3>
+                    <p>Fill out the form and we'll get back to you within one business day.</p>
+
+                    <form id="leadForm" action="https://formspree.io/f/xyzforms" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@county.gov">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(512) 555-1234">
+                            </div>
+                            <div class="form-group">
+                                <label for="county">County / Organization</label>
+                                <input type="text" id="county" name="county" placeholder="Travis County">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="digitization">Document Digitization</option>
+                                <option value="database">Secure Database Solutions</option>
+                                <option value="compliance">Compliance & Training</option>
+                                <option value="consultation">General Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell us about your project</label>
+                            <textarea id="message" name="message" placeholder="How many records? What's your timeline? Any specific challenges?"></textarea>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-accent">
+                                <span>Request Consultation</span>
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left:8px;"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="form-success" id="formSuccess">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                            <span><strong>Thank you!</strong> We'll be in touch within 24 hours.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="fade-in">Already a Client?</h2>
+            <p class="fade-in">Access your records and manage your account through our secure client portal.</p>
             <div class="cta-buttons fade-in">
-                <a href="mailto:info@ecbtx.com" class="btn btn-white btn-lg">Email Us</a>
-                <a href="https://react.ecbtx.com" class="btn btn-outline btn-lg" style="border-color:white;color:white;">Client Portal</a>
+                <a href="https://react.ecbtx.com" class="btn btn-white btn-lg">Client Portal Login</a>
             </div>
         </div>
     </section>
@@ -873,6 +1139,46 @@
                 }
             });
         });
+
+        // Lead capture form handling
+        const leadForm = document.getElementById('leadForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        if (leadForm) {
+            leadForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const submitBtn = leadForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span>Sending...</span>';
+                submitBtn.disabled = true;
+
+                try {
+                    const formData = new FormData(leadForm);
+
+                    // Send to Formspree (or your CRM endpoint)
+                    const response = await fetch(leadForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        leadForm.reset();
+                        formSuccess.classList.add('show');
+                        setTimeout(() => formSuccess.classList.remove('show'), 8000);
+                    } else {
+                        throw new Error('Submission failed');
+                    }
+                } catch (error) {
+                    console.error('Form error:', error);
+                    alert('There was an error. Please email us directly at info@ecbtx.com');
+                } finally {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
     </script>
 </body>
 </html>
