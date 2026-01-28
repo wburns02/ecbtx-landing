@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECB, TX LLC | Digitizing Texas Septic Records</title>
+    <meta name="description" content="Professional document digitization and records management for Texas septic systems. 18+ years IT experience meets septic industry expertise.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ECB, TX LLC | Digitizing Texas Septic Records">
+    <meta property="og:description" content="Professional document digitization and records management for Texas septic systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ecbtx.com">
+    <meta property="og:image" content="https://ecbtx.com/images/og-image.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================
+           CSS RESET & BASE
+           ========================================== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e3a8a;
+            --accent: #059669;
+            --accent-light: #10b981;
+            --dark: #1f2937;
+            --gray-600: #4b5563;
+            --gray-400: #9ca3af;
+            --light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ==========================================
+           NAVIGATION
+           ========================================== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 44px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+            }
+        }
+
+        /* ==========================================
+           HERO SECTION
+           ========================================== */
+        .hero {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons .btn {
+            min-width: 180px;
+        }
+
+        /* ==========================================
+           STATS BAR
+           ========================================== */
+        .stats-bar {
+            background: var(--white);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .stat-item p {
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* ==========================================
+           PROBLEM/SOLUTION
+           ========================================== */
+        .problem-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .problem-grid { grid-template-columns: 1fr; }
+        }
+
+        .problem-list {
+            list-style: none;
+        }
+
+        .problem-list li {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .problem-list li:last-child { border-bottom: none; }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .problem-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+        }
+
+        .problem-text h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .problem-text p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+
+        .solution-card h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+
+        .solution-card p {
+            color: var(--gray-600);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* ==========================================
+           SERVICES
+           ========================================== */
+        .services-section {
+            padding: 100px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 16px;
+            padding: 40px 32px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ==========================================
+           ABOUT / FOUNDER
+           ========================================== */
+        .about-section {
+            padding: 100px 0;
+            background: var(--dark);
+            color: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .about-stat {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .about-stat h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-light);
+            margin-bottom: 8px;
+        }
+
+        .about-stat p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* ==========================================
+           CTA SECTION
+           ========================================== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--accent) 0%, #047857 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            min-width: 200px;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--accent);
+        }
+
+        .btn-white:hover {
+            background: var(--light);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================
+           ANIMATIONS
+           ========================================== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <span class="logo-text">ECB, TX LLC</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://react.ecbtx.com" class="btn btn-primary">Client Portal</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                    Serving Texas Hill Country
+                </div>
+                <h1>Digitizing Texas Septic Records</h1>
+                <p>Professional document digitization and records management for Texas counties. We bridge 18+ years of IT expertise with real septic industry experience to modernize how Texas manages OSSF records.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-accent btn-lg">Get Started</a>
+                    <a href="https://react.ecbtx.com" class="btn btn-outline btn-lg" style="border-color:white;color:white;">Client Portal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <h3>18+</h3>
+                    <p>Years IT Experience</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3>TX</h3>
+                    <p>Based & Focused</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3>100%</h3>
+                    <p>Compliant</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3>24/7</h3>
+                    <p>Digital Access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>The Problem We Solve</h2>
+                <p>Texas counties have decades of critical septic records buried in filing cabinets, scattered across offices, and deteriorating over time.</p>
+            </div>
+            <div class="problem-grid">
+                <ul class="problem-list fade-in">
+                    <li>
+                        <div class="problem-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <div class="problem-text">
+                            <h4>Paper Records Deteriorating</h4>
+                            <p>Decades of permits and inspections fading in filing cabinets</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="problem-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div class="problem-text">
+                            <h4>Hours to Find Records</h4>
+                            <p>Manual searches waste staff time and frustrate property owners</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="problem-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <div class="problem-text">
+                            <h4>Compliance Risks</h4>
+                            <p>Scattered data makes regulatory compliance difficult</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="solution-card fade-in">
+                    <h3>Our Solution</h3>
+                    <p>We transform your paper chaos into an organized, searchable digital archive. High-speed scanning, professional OCR, secure cloud storage, and full compliance with Texas records retention laws.</p>
+                    <p style="margin-top:20px;"><strong>Find any record in seconds, not hours.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>What We Offer</h2>
+                <p>Comprehensive records management services tailored for Texas septic system documentation.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3>Document Digitization</h3>
+                    <p>High-speed scanning of paper records with professional OCR for searchable PDFs. Quality assured and organized by your preferred schema.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    </div>
+                    <h3>Secure Database</h3>
+                    <p>Centralized, searchable database with cloud backup. Role-based access control and full audit trails for compliance.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3>Compliance & Support</h3>
+                    <p>Full compliance with Texas records retention laws. Ongoing training and support for your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <h2>Why ECB, TX LLC?</h2>
+                    <p>After 18 years in IT and a year running a septic company, I saw firsthand the challenges Texas counties face with septic records. Filing cabinets full of decades-old permits. Hours spent searching for a single inspection report.</p>
+                    <p>I founded ECB, TX LLC to bridge my two worlds - bringing modern technology solutions to an industry that deserves better tools. This isn't just about scanning documents. It's about moving the Texas septic industry forward.</p>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="about-stat">
+                        <h3>18+</h3>
+                        <p>Years in IT</p>
+                    </div>
+                    <div class="about-stat">
+                        <h3>1</h3>
+                        <p>Year in Septic</p>
+                    </div>
+                    <div class="about-stat">
+                        <h3>2</h3>
+                        <p>Worlds Combined</p>
+                    </div>
+                    <div class="about-stat">
+                        <h3>TX</h3>
+                        <p>Native</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2 class="fade-in">Ready to Digitize Your Records?</h2>
+            <p class="fade-in">Let's discuss how ECB, TX LLC can help your county preserve septic history and improve compliance.</p>
+            <div class="cta-buttons fade-in">
+                <a href="mailto:info@ecbtx.com" class="btn btn-white btn-lg">Email Us</a>
+                <a href="https://react.ecbtx.com" class="btn btn-outline btn-lg" style="border-color:white;color:white;">Client Portal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>ECB, TX LLC</h3>
+                    <p>Professional document digitization and records management for Texas septic system records. Bridging technology and industry expertise.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://react.ecbtx.com">Client Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@ecbtx.com">info@ecbtx.com</a></li>
+                        <li>Texas Hill Country</li>
+                        <li>Serving all Texas counties</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ECB, TX LLC. All rights reserved.</p>
+                <p>Your data is handled with care and in compliance with Texas law.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
