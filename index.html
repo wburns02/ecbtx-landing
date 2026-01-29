@@ -1098,7 +1098,13 @@
                     <h3>Request a Free Consultation</h3>
                     <p>Fill out the form and we'll get back to you within one business day.</p>
 
-                    <form id="leadForm" action="https://formspree.io/f/xyzforms" method="POST">
+                    <form id="leadForm" name="lead-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Hidden field for Netlify form name -->
+                        <input type="hidden" name="form-name" value="lead-capture">
+                        <!-- Honeypot field for spam protection (hidden) -->
+                        <p style="display:none;">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -1229,7 +1235,7 @@
             });
         });
 
-        // Lead capture form handling
+        // Lead capture form handling (Netlify Forms)
         const leadForm = document.getElementById('leadForm');
         const formSuccess = document.getElementById('formSuccess');
 
@@ -1245,11 +1251,11 @@
                 try {
                     const formData = new FormData(leadForm);
 
-                    // Send to Formspree (or your CRM endpoint)
-                    const response = await fetch(leadForm.action, {
+                    // Submit to Netlify Forms
+                    const response = await fetch('/', {
                         method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(formData).toString()
                     });
 
                     if (response.ok) {
@@ -1261,7 +1267,7 @@
                     }
                 } catch (error) {
                     console.error('Form error:', error);
-                    alert('There was an error. Please email us directly at info@ecbtx.com');
+                    alert('There was an error. Please call us at (979) 236-1958 or email info@ecbtx.com');
                 } finally {
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
