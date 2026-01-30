@@ -3,19 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECB, TX LLC | Digitizing Texas Septic Records</title>
-    <meta name="description" content="Professional document digitization and records management for Texas septic systems. 18+ years IT experience meets septic industry expertise.">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+
+      // Custom event tracking for SEO conversions
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track phone clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+          link.addEventListener('click', function() {
+            gtag('event', 'phone_click', {
+              'event_category': 'contact',
+              'event_label': this.href
+            });
+          });
+        });
+
+        // Track email clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+          link.addEventListener('click', function() {
+            gtag('event', 'email_click', {
+              'event_category': 'contact',
+              'event_label': this.href
+            });
+          });
+        });
+
+        // Track scroll depth
+        let scrollDepths = [25, 50, 75, 100];
+        let scrolledDepths = [];
+        window.addEventListener('scroll', function() {
+          let scrollPercent = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+          scrollDepths.forEach(function(depth) {
+            if (scrollPercent >= depth && !scrolledDepths.includes(depth)) {
+              scrolledDepths.push(depth);
+              gtag('event', 'scroll_depth', {
+                'event_category': 'engagement',
+                'event_label': depth + '%'
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <title>ECB, TX LLC | Digitizing Texas Septic Records | Document Scanning Services</title>
+    <meta name="description" content="Professional document digitization and records management for Texas septic systems. Transform paper OSSF permits into searchable digital archives. 18+ years IT experience. Serving Texas Hill Country.">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="septic records digitization, Texas OSSF records, document scanning Texas, septic permit digitization, records management Texas, Hill Country document services, county records digitization, septic system documentation, paper to digital conversion, Texas septic compliance">
+    <meta name="author" content="ECB, TX LLC">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://ecbtx.com/">
+
+    <!-- Geographic/Local SEO -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Texas Hill Country">
+    <meta name="geo.position" content="30.2672;-97.7431">
+    <meta name="ICBM" content="30.2672, -97.7431">
+
+    <!-- Theme and Branding -->
+    <meta name="theme-color" content="#1e40af">
+    <meta name="msapplication-TileColor" content="#1e40af">
+    <meta name="application-name" content="ECB, TX LLC">
+    <meta name="apple-mobile-web-app-title" content="ECB, TX LLC">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon.jpg">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="ECB, TX LLC">
     <meta property="og:title" content="ECB, TX LLC | Digitizing Texas Septic Records">
-    <meta property="og:description" content="Professional document digitization and records management for Texas septic systems.">
+    <meta property="og:description" content="Professional document digitization and records management for Texas septic systems. Transform decades of paper records into searchable digital archives.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ecbtx.com">
+    <meta property="og:url" content="https://ecbtx.com/">
     <meta property="og:image" content="https://ecbtx.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ECB, TX LLC - Digitizing Texas Septic Records">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ECB, TX LLC | Digitizing Texas Septic Records">
+    <meta name="twitter:description" content="Professional document digitization for Texas septic systems. 18+ years IT expertise meets septic industry knowledge.">
+    <meta name="twitter:image" content="https://ecbtx.com/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="ECB, TX LLC - Document Digitization Services">
+
+    <!-- Structured Data: LocalBusiness + Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://ecbtx.com/#business",
+      "name": "ECB, TX LLC",
+      "alternateName": "ECB Texas",
+      "description": "Professional document digitization and records management services specializing in Texas septic system (OSSF) records. We transform paper permits, inspections, and compliance documents into searchable digital archives.",
+      "url": "https://ecbtx.com",
+      "logo": "https://ecbtx.com/images/logo.jpg",
+      "image": "https://ecbtx.com/images/og-image.jpg",
+      "telephone": "+1-979-236-1958",
+      "email": "info@ecbtx.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.2672,
+        "longitude": -97.7431
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas",
+        "sameAs": "https://en.wikipedia.org/wiki/Texas"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Document Digitization Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Document Digitization",
+              "description": "High-speed scanning of paper records with professional OCR for searchable PDFs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Secure Database Solutions",
+              "description": "Centralized, searchable database with cloud backup and role-based access control"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Compliance & Training",
+              "description": "Full compliance with Texas records retention laws and ongoing team training"
+            }
+          }
+        ]
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Will Burns",
+        "jobTitle": "Founder",
+        "description": "18+ years IT experience combined with septic industry expertise"
+      },
+      "foundingDate": "2025",
+      "knowsAbout": [
+        "Document Digitization",
+        "Records Management",
+        "Septic Systems",
+        "OSSF Permits",
+        "Texas Environmental Compliance",
+        "OCR Technology",
+        "Cloud Storage Solutions"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ECB, TX LLC",
+      "url": "https://ecbtx.com",
+      "description": "Professional document digitization services for Texas septic records",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ECB, TX LLC",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ecbtx.com/images/logo.jpg"
+        }
+      }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ecbtx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://ecbtx.com/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "About",
+          "item": "https://ecbtx.com/#about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "FAQ",
+          "item": "https://ecbtx.com/#faq"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact",
+          "item": "https://ecbtx.com/#contact"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Privacy Policy",
+          "item": "https://ecbtx.com/privacy.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Terms of Service",
+          "item": "https://ecbtx.com/terms.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage (improves rich snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is document digitization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Document digitization is the process of converting paper records into searchable digital files. We use high-speed scanners and OCR (Optical Character Recognition) technology to transform your physical documents into organized, searchable PDFs that can be accessed from any device, backed up to the cloud, and searched instantly by keyword."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does document scanning cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Document scanning costs vary based on volume, document condition, and required processing. For most Texas county projects, pricing ranges from $0.05 to $0.15 per page depending on complexity. We provide free, no-obligation quotes after reviewing your specific needs. Contact us at (979) 236-1958 for a custom estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of documents can you digitize?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We digitize all types of documents including septic/OSSF permits, government records, legal documents, medical records (HIPAA compliant), business contracts, historical archives, maps, engineering drawings, and more. We handle everything from standard letter-size to large-format documents up to 36 inches wide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does document digitization take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turnaround time depends on project size and complexity. A typical county records project of 10,000-50,000 pages takes 2-4 weeks. Rush services are available for urgent needs. We provide detailed timelines in our project proposals and keep you updated throughout the process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data secure during digitization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We use AES-256 encryption for all digital files, secure facilities with access controls, and all staff sign confidentiality agreements. Your documents never leave our secure chain of custody. We comply with Texas records management laws and can meet HIPAA, CJIS, and other regulatory requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve my county in Texas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We serve all 254 Texas counties with a focus on the Hill Country and Central Texas regions including Blanco, Hays, Travis, Williamson, Gillespie, Kendall, Comal, Kerr, Bastrop, and surrounding areas. We can pick up and deliver documents or work on-site at your facility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an OSSF permit and why digitize it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OSSF (On-Site Sewage Facility) permits are Texas regulatory documents for septic systems. Many counties have decades of paper OSSF records that are difficult to search and at risk of damage. Digitizing these records makes permit lookups instant, enables compliance tracking, and protects irreplaceable historical data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you integrate with our existing software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can format digitized documents to integrate with most document management systems, GIS platforms, and county software. We export in standard formats (PDF, TIFF, CSV) and can customize metadata fields to match your existing database structure. Our team has 18+ years of IT experience."
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -544,6 +860,67 @@
         }
 
         /* ==========================================
+           FAQ SECTION - Voice Search Optimized
+           ========================================== */
+        .faq-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .faq-section .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-section .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .faq-section .section-header p {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+
+        .faq-item {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .faq-item p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ==========================================
            LEAD CAPTURE FORM
            ========================================== */
         .contact-section {
@@ -883,6 +1260,7 @@
             <div class="nav-links" id="navLinks">
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
                 <a href="https://react.ecbtx.com" class="btn btn-primary">Client Portal</a>
             </div>
@@ -1046,6 +1424,66 @@
         </div>
     </section>
 
+    <!-- FAQ Section - Voice Search Optimized -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about document digitization services</p>
+            </div>
+
+            <div class="faq-grid fade-in">
+                <!-- Voice search: "What is document digitization?" -->
+                <div class="faq-item">
+                    <h3>What is document digitization?</h3>
+                    <p>Document digitization is the process of converting paper records into searchable digital files. We use high-speed scanners and OCR (Optical Character Recognition) technology to transform your physical documents into organized, searchable PDFs that can be accessed from any device, backed up to the cloud, and searched instantly by keyword.</p>
+                </div>
+
+                <!-- Voice search: "How much does document scanning cost?" -->
+                <div class="faq-item">
+                    <h3>How much does document scanning cost?</h3>
+                    <p>Document scanning costs vary based on volume, document condition, and required processing. For most Texas county projects, pricing ranges from $0.05 to $0.15 per page depending on complexity. We provide free, no-obligation quotes after reviewing your specific needs. Contact us at (979) 236-1958 for a custom estimate.</p>
+                </div>
+
+                <!-- Voice search: "What types of documents can you digitize?" -->
+                <div class="faq-item">
+                    <h3>What types of documents can you digitize?</h3>
+                    <p>We digitize all types of documents including septic/OSSF permits, government records, legal documents, medical records (HIPAA compliant), business contracts, historical archives, maps, engineering drawings, and more. We handle everything from standard letter-size to large-format documents up to 36 inches wide.</p>
+                </div>
+
+                <!-- Voice search: "How long does document digitization take?" -->
+                <div class="faq-item">
+                    <h3>How long does document digitization take?</h3>
+                    <p>Turnaround time depends on project size and complexity. A typical county records project of 10,000-50,000 pages takes 2-4 weeks. Rush services are available for urgent needs. We provide detailed timelines in our project proposals and keep you updated throughout the process.</p>
+                </div>
+
+                <!-- Voice search: "Is my data secure during digitization?" -->
+                <div class="faq-item">
+                    <h3>Is my data secure during digitization?</h3>
+                    <p>Absolutely. We use AES-256 encryption for all digital files, secure facilities with access controls, and all staff sign confidentiality agreements. Your documents never leave our secure chain of custody. We comply with Texas records management laws and can meet HIPAA, CJIS, and other regulatory requirements.</p>
+                </div>
+
+                <!-- Voice search: "Do you serve my county in Texas?" -->
+                <div class="faq-item">
+                    <h3>Do you serve my county in Texas?</h3>
+                    <p>Yes! We serve all 254 Texas counties with a focus on the Hill Country and Central Texas regions including Blanco, Hays, Travis, Williamson, Gillespie, Kendall, Comal, Kerr, Bastrop, and surrounding areas. We can pick up and deliver documents or work on-site at your facility.</p>
+                </div>
+
+                <!-- Voice search: "What is an OSSF permit?" -->
+                <div class="faq-item">
+                    <h3>What is an OSSF permit and why digitize it?</h3>
+                    <p>OSSF (On-Site Sewage Facility) permits are Texas regulatory documents for septic systems. Many counties have decades of paper OSSF records that are difficult to search and at risk of damage. Digitizing these records makes permit lookups instant, enables compliance tracking, and protects irreplaceable historical data.</p>
+                </div>
+
+                <!-- Voice search: "Can you integrate with our existing software?" -->
+                <div class="faq-item">
+                    <h3>Can you integrate with our existing software?</h3>
+                    <p>Yes, we can format digitized documents to integrate with most document management systems, GIS platforms, and county software. We export in standard formats (PDF, TIFF, CSV) and can customize metadata fields to match your existing database structure. Our team has 18+ years of IT experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact / Lead Capture -->
     <section class="contact-section" id="contact">
         <div class="container">
@@ -1187,6 +1625,8 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="https://react.ecbtx.com">Client Portal</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -1259,6 +1699,14 @@
                     });
 
                     if (response.ok) {
+                        // Track form submission in GA4
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'form_submit', {
+                                'event_category': 'lead_generation',
+                                'event_label': 'lead_capture_form',
+                                'value': 1
+                            });
+                        }
                         leadForm.reset();
                         formSuccess.classList.add('show');
                         setTimeout(() => formSuccess.classList.remove('show'), 8000);
