@@ -427,6 +427,14 @@
 
         .nav-links a:hover { color: var(--primary); }
 
+        .nav-links a.btn-primary {
+            color: white;
+        }
+
+        .nav-links a.btn-primary:hover {
+            color: white;
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -1271,7 +1279,7 @@
         .top-cta .btn {
             padding: 10px 24px;
             background: white;
-            color: var(--accent);
+            color: #047857;
             font-weight: 700;
             border-radius: 6px;
             animation: pulse 2s infinite;
@@ -1297,9 +1305,10 @@
         }
 
         @media (max-width: 600px) {
-            .top-cta { padding: 12px 16px; gap: 10px; }
-            .top-cta p { font-size: 0.9rem; }
-            .top-cta .btn { padding: 8px 16px; font-size: 0.9rem; }
+            .top-cta { padding: 10px 16px; gap: 8px; }
+            .top-cta p { font-size: 0.85rem; }
+            .top-cta .btn { padding: 6px 14px; font-size: 0.85rem; }
+            .top-cta .phone-link { display: none; }
         }
 
         /* Adjust nav position for top banner */
@@ -1308,7 +1317,7 @@
         }
 
         @media (max-width: 600px) {
-            nav { top: 80px; }
+            nav { top: 56px; }
         }
     </style>
 </head>
@@ -1705,7 +1714,7 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://react.ecbtx.com">Client Portal</a></li>
+                        <li><a href="https://react.ecbtx.com" target="_blank" rel="noopener noreferrer">Client Portal <span class="sr-only">(opens in new tab)</span></a></li>
                         <li><a href="/privacy.html">Privacy Policy</a></li>
                         <li><a href="/terms.html">Terms of Service</a></li>
                     </ul>
