@@ -1,0 +1,31 @@
+{
+  "name": "ecbtx-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "test:seo": "npx playwright test tests/website-seo.e2e.spec.ts",
+    "test:a11y": "npx playwright test tests/website-accessibility.e2e.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wburns02/ecbtx-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wburns02/ecbtx-landing/issues"
+  },
+  "homepage": "https://github.com/wburns02/ecbtx-landing#readme",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.58.0",
+    "typescript": "^5.9.3"
+  }
+}
