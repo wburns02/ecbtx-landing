@@ -363,10 +363,10 @@
             color: var(--gray-600);
         }
 
-        .local-info li::before {
-            content: "\2713";
+        .local-info li .check-icon {
             color: var(--accent);
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         /* CTA Section */
@@ -434,22 +434,73 @@
         .footer-links a {
             margin: 0 15px;
         }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
-        <div class="container">
-            <a href="/" class="logo">ECB, TX LLC</a>
-            <div class="header-cta">
-                <a href="tel:+19792361958" class="phone-link">(979) 236-1958</a>
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <a href="/" class="logo">ECB, TX LLC</a>
+                <div class="header-cta">
+                <a href="tel:+19792361958" class="phone-link" aria-label="Call ECB TX at (979) 236-1958">(979) 236-1958</a>
                 <a href="/#contact" class="btn btn-primary">Free Quote</a>
             </div>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <section class="hero">
+    <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
-            <h1>Document Digitization Services in Burnet County, Texas</h1>
+            <h1 id="hero-heading">Document Digitization Services in Burnet County, Texas</h1>
             <p>Professional document scanning and records management for Burnet County government offices, businesses, and residents in the Highland Lakes region. Specializing in OSSF/septic permits, legal documents, and historical records.</p>
             <div class="hero-cta">
                 <a href="tel:+19792361958" class="btn btn-white">Call (979) 236-1958</a>
@@ -458,15 +509,15 @@
         </div>
     </section>
 
-    <section>
+    <section aria-labelledby="services-heading">
         <div class="container">
-            <h2>Document Digitization Services for Burnet County</h2>
+            <h2 id="services-heading">Document Digitization Services for Burnet County</h2>
             <p>ECB, TX LLC provides comprehensive document digitization services throughout Burnet County, including Burnet, Marble Falls, Granite Shoals, Bertram, Highland Haven, and surrounding Highland Lakes communities. With 18+ years of IT experience combined with deep knowledge of Texas regulations, we deliver secure, accurate, and efficient document conversion services.</p>
 
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                     </div>
@@ -476,7 +527,7 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                         </svg>
                     </div>
@@ -486,7 +537,7 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
@@ -497,40 +548,40 @@
         </div>
     </section>
 
-    <section class="section-alt">
+    <section class="section-alt" aria-labelledby="why-heading">
         <div class="container">
             <div class="local-info">
                 <div>
-                    <h2>Why Burnet County Chooses ECB, TX LLC</h2>
+                    <h2 id="why-heading">Why Burnet County Chooses ECB, TX LLC</h2>
                     <p>Serving the beautiful Highland Lakes region, we understand the unique needs of Burnet County organizations. From preserving historical records in Burnet to modernizing municipal operations in Marble Falls and Granite Shoals, we deliver solutions tailored to your specific requirements.</p>
                     <ul>
-                        <li>On-site service available in Burnet and Marble Falls</li>
-                        <li>Familiar with Highland Lakes region regulations and requirements</li>
-                        <li>Secure document pickup and delivery throughout the county</li>
-                        <li>Competitive pricing for local government and small business</li>
-                        <li>Fast turnaround with quality guaranteed</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> On-site service available in Burnet and Marble Falls</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Familiar with Highland Lakes region regulations and requirements</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Secure document pickup and delivery throughout the county</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Competitive pricing for local government and small business</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Fast turnaround with quality guaranteed</li>
                     </ul>
                 </div>
                 <div>
                     <h3>Serving All of Burnet County</h3>
                     <p>We provide document digitization services to:</p>
                     <ul>
-                        <li>Burnet County Courthouse</li>
-                        <li>City of Burnet</li>
-                        <li>City of Marble Falls</li>
-                        <li>City of Granite Shoals</li>
-                        <li>City of Bertram</li>
-                        <li>Highland Haven</li>
-                        <li>Local businesses and lakeside properties</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Burnet County Courthouse</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> City of Burnet</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> City of Marble Falls</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> City of Granite Shoals</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> City of Bertram</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Highland Haven</li>
+                        <li><span class="check-icon" aria-hidden="true">✓</span> Local businesses and lakeside properties</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
+    <section class="cta-section" aria-labelledby="cta-heading">
         <div class="container">
-            <h2>Ready to Digitize Your Burnet County Records?</h2>
+            <h2 id="cta-heading">Ready to Digitize Your Burnet County Records?</h2>
             <p>Get a free consultation and custom quote for your document digitization project. We'll assess your needs and provide a detailed proposal with no obligation.</p>
             <div class="hero-cta" style="justify-content: center;">
                 <a href="tel:+19792361958" class="btn btn-white">Call (979) 236-1958</a>
@@ -539,9 +590,9 @@
         </div>
     </section>
 
-    <section>
+    <section aria-labelledby="nearby-heading">
         <div class="container">
-            <h2>Nearby Service Areas</h2>
+            <h2 id="nearby-heading">Nearby Service Areas</h2>
             <p>We also provide document digitization services in these nearby Central Texas counties:</p>
             <div class="related-counties">
                 <a href="/counties/williamson.html" class="county-link">Williamson County</a>
@@ -553,7 +604,9 @@
         </div>
     </section>
 
-    <footer>
+    </main>
+
+    <footer aria-label="Site footer">
         <div class="container">
             <p>&copy; 2026 ECB, TX LLC. All rights reserved.</p>
             <p>Professional Document Digitization Services in Burnet County, Texas</p>

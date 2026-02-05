@@ -159,17 +159,54 @@
         footer a {
             color: var(--white);
         }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
-        <div class="container">
-            <a href="/" class="logo">ECB, TX LLC</a>
-            <a href="/" class="back-link">&larr; Back to Home</a>
-        </div>
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <a href="/" class="logo">ECB, TX LLC</a>
+                <a href="/" class="back-link">&larr; Back to Home</a>
+            </div>
+        </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="container">
             <h1>Terms of Service</h1>
             <p class="last-updated">Last Updated: January 29, 2026</p>
@@ -294,7 +331,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer aria-label="Site footer">
         <div class="container">
             <p>&copy; 2026 ECB, TX LLC. All rights reserved.</p>
             <p><a href="/">Home</a> | <a href="/privacy.html">Privacy Policy</a> | <a href="/#contact">Contact</a></p>

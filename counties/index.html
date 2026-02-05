@@ -276,22 +276,73 @@
         .footer-links a {
             margin: 0 15px;
         }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
-        <div class="container">
-            <a href="/" class="logo">ECB, TX LLC</a>
-            <div class="header-cta">
-                <a href="tel:+19792361958" class="phone-link">(979) 236-1958</a>
-                <a href="/#contact" class="btn btn-primary">Free Quote</a>
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <a href="/" class="logo">ECB, TX LLC</a>
+                <div class="header-cta">
+                    <a href="tel:+19792361958" class="phone-link" aria-label="Call ECB TX at (979) 236-1958">(979) 236-1958</a>
+                    <a href="/#contact" class="btn btn-primary">Free Quote</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <section class="hero">
+    <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
-            <h1>Texas Document Digitization Service Areas</h1>
+            <h1 id="hero-heading">Texas Document Digitization Service Areas</h1>
             <p>Professional document scanning and records management services across Texas Hill Country and Central Texas. We serve government offices, businesses, and residents in 15+ counties.</p>
         </div>
     </section>
@@ -299,7 +350,7 @@
     <section>
         <div class="container">
             <div class="region-section">
-                <h2>Texas Hill Country</h2>
+                <h2 id="hill-country-heading">Texas Hill Country</h2>
                 <p class="region-description">Serving the scenic Hill Country region with specialized document digitization services. From OSSF/septic permits to historical archives, we help preserve and modernize your records.</p>
 
                 <div class="counties-grid">
@@ -339,7 +390,7 @@
             </div>
 
             <div class="region-section">
-                <h2>Central Texas</h2>
+                <h2 id="central-texas-heading">Central Texas</h2>
                 <p class="region-description">Comprehensive document digitization services for the greater Austin area and surrounding Central Texas counties. High-volume scanning for government, legal, medical, and business documents.</p>
 
                 <div class="counties-grid">
@@ -376,15 +427,17 @@
         </div>
     </section>
 
-    <section class="cta-section">
+    <section class="cta-section" aria-labelledby="cta-heading">
         <div class="container">
-            <h2>Don't See Your County?</h2>
+            <h2 id="cta-heading">Don't See Your County?</h2>
             <p>We serve all of Texas! Contact us for a free consultation about your document digitization project.</p>
             <a href="tel:+19792361958" class="btn btn-white">Call (979) 236-1958</a>
         </div>
     </section>
 
-    <footer>
+    </main>
+
+    <footer aria-label="Site footer">
         <div class="container">
             <p>&copy; 2026 ECB, TX LLC. All rights reserved.</p>
             <p>Professional Document Digitization Services Across Texas</p>

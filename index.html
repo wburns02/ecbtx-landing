@@ -1038,10 +1038,11 @@
             background: white;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
         }
@@ -1170,6 +1171,78 @@
         }
 
         /* ==========================================
+           ACCESSIBILITY
+           ========================================== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            z-index: 10000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .form-error-message {
+            background: #fee2e2;
+            border: 1px solid #ef4444;
+            color: #991b1b;
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .form-error-message.show {
+            display: block;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        /* ==========================================
            TOP CTA BANNER - UNMISSABLE
            ========================================== */
         .top-cta {
@@ -1240,21 +1313,23 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- TOP CTA BANNER - FIRST THING VISITORS SEE -->
-    <div class="top-cta">
+    <div class="top-cta" role="complementary" aria-label="Special offer">
         <p>Ready to modernize your records?</p>
         <a href="#contact" class="btn">Free Consultation</a>
         <span style="opacity:0.7;">or call</span>
-        <a href="tel:+19792361958" class="phone-link">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <a href="tel:+19792361958" class="phone-link" aria-label="Call ECB TX at (979) 236-1958">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             (979) 236-1958
         </a>
     </div>
 
     <!-- Navigation -->
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="container nav-inner">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-text">ECB, TX LLC</span>
             </a>
             <div class="nav-links" id="navLinks">
@@ -1262,52 +1337,54 @@
                 <a href="#about">About</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
-                <a href="https://react.ecbtx.com" class="btn btn-primary">Client Portal</a>
+                <a href="https://react.ecbtx.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Client Portal <span class="sr-only">(opens in new tab)</span></a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
                     <path d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
     </nav>
 
+    <main id="main-content">
+
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
             <div class="hero-content fade-in">
                 <div class="hero-badge">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
                     Serving Texas Hill Country
                 </div>
-                <h1>Digitizing Texas Septic Records</h1>
+                <h1 id="hero-heading">Digitizing Texas Septic Records</h1>
                 <p>Professional document digitization and records management for Texas counties. We bridge 18+ years of IT expertise with real septic industry experience to modernize how Texas manages OSSF records.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-accent btn-lg">Get Started</a>
-                    <a href="https://react.ecbtx.com" class="btn btn-outline btn-lg" style="border-color:white;color:white;">Client Portal</a>
+                    <a href="https://react.ecbtx.com" class="btn btn-outline btn-lg" style="border-color:white;color:white;" target="_blank" rel="noopener noreferrer">Client Portal <span class="sr-only">(opens in new tab)</span></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Bar -->
-    <section class="stats-bar">
+    <section class="stats-bar" aria-label="Company statistics">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item fade-in">
-                    <h3>18+</h3>
+                    <p class="stat-number">18+</p>
                     <p>Years IT Experience</p>
                 </div>
                 <div class="stat-item fade-in">
-                    <h3>TX</h3>
+                    <p class="stat-number">TX</p>
                     <p>Based & Focused</p>
                 </div>
                 <div class="stat-item fade-in">
-                    <h3>100%</h3>
+                    <p class="stat-number">100%</p>
                     <p>Compliant</p>
                 </div>
                 <div class="stat-item fade-in">
-                    <h3>24/7</h3>
+                    <p class="stat-number">24/7</p>
                     <p>Digital Access</p>
                 </div>
             </div>
@@ -1315,38 +1392,38 @@
     </section>
 
     <!-- Problem/Solution -->
-    <section class="problem-section">
+    <section class="problem-section" aria-labelledby="problem-heading">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>The Problem We Solve</h2>
+                <h2 id="problem-heading">The Problem We Solve</h2>
                 <p>Texas counties have decades of critical septic records buried in filing cabinets, scattered across offices, and deteriorating over time.</p>
             </div>
             <div class="problem-grid">
                 <ul class="problem-list fade-in">
                     <li>
                         <div class="problem-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         </div>
                         <div class="problem-text">
-                            <h4>Paper Records Deteriorating</h4>
+                            <h3>Paper Records Deteriorating</h3>
                             <p>Decades of permits and inspections fading in filing cabinets</p>
                         </div>
                     </li>
                     <li>
                         <div class="problem-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <div class="problem-text">
-                            <h4>Hours to Find Records</h4>
+                            <h3>Hours to Find Records</h3>
                             <p>Manual searches waste staff time and frustrate property owners</p>
                         </div>
                     </li>
                     <li>
                         <div class="problem-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                         </div>
                         <div class="problem-text">
-                            <h4>Compliance Risks</h4>
+                            <h3>Compliance Risks</h3>
                             <p>Scattered data makes regulatory compliance difficult</p>
                         </div>
                     </li>
@@ -1361,30 +1438,30 @@
     </section>
 
     <!-- Services -->
-    <section class="services-section" id="services">
+    <section class="services-section" id="services" aria-labelledby="services-heading">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>What We Offer</h2>
+                <h2 id="services-heading">What We Offer</h2>
                 <p>Comprehensive records management services tailored for Texas septic system documentation.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
                     <h3>Document Digitization</h3>
                     <p>High-speed scanning of paper records with professional OCR for searchable PDFs. Quality assured and organized by your preferred schema.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
                     </div>
                     <h3>Secure Database</h3>
                     <p>Centralized, searchable database with cloud backup. Role-based access control and full audit trails for compliance.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
                     <h3>Compliance & Support</h3>
                     <p>Full compliance with Texas records retention laws. Ongoing training and support for your team.</p>
@@ -1394,29 +1471,29 @@
     </section>
 
     <!-- About -->
-    <section class="about-section" id="about">
+    <section class="about-section" id="about" aria-labelledby="about-heading">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content fade-in">
-                    <h2>Why ECB, TX LLC?</h2>
+                    <h2 id="about-heading">Why ECB, TX LLC?</h2>
                     <p>After 18 years in IT and a year running a septic company, I saw firsthand the challenges Texas counties face with septic records. Filing cabinets full of decades-old permits. Hours spent searching for a single inspection report.</p>
                     <p>I founded ECB, TX LLC to bridge my two worlds - bringing modern technology solutions to an industry that deserves better tools. This isn't just about scanning documents. It's about moving the Texas septic industry forward.</p>
                 </div>
                 <div class="about-stats fade-in">
                     <div class="about-stat">
-                        <h3>18+</h3>
+                        <p class="stat-number" style="color: var(--accent-light);">18+</p>
                         <p>Years in IT</p>
                     </div>
                     <div class="about-stat">
-                        <h3>1</h3>
+                        <p class="stat-number" style="color: var(--accent-light);">1</p>
                         <p>Year in Septic</p>
                     </div>
                     <div class="about-stat">
-                        <h3>2</h3>
+                        <p class="stat-number" style="color: var(--accent-light);">2</p>
                         <p>Worlds Combined</p>
                     </div>
                     <div class="about-stat">
-                        <h3>TX</h3>
+                        <p class="stat-number" style="color: var(--accent-light);">TX</p>
                         <p>Native</p>
                     </div>
                 </div>
@@ -1425,10 +1502,10 @@
     </section>
 
     <!-- FAQ Section - Voice Search Optimized -->
-    <section class="faq-section" id="faq">
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Frequently Asked Questions</h2>
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
                 <p>Get answers to common questions about document digitization services</p>
             </div>
 
@@ -1485,47 +1562,47 @@
     </section>
 
     <!-- Contact / Lead Capture -->
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info fade-in">
-                    <h2>Let's Talk About Your Records</h2>
+                    <h2 id="contact-heading">Let's Talk About Your Records</h2>
                     <p>Ready to modernize your county's septic records? Schedule a free consultation to discuss your needs and get a custom quote.</p>
 
                     <div class="contact-methods">
                         <div class="contact-method">
                             <div class="contact-method-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             </div>
                             <div class="contact-method-text">
-                                <h4>Phone / Text</h4>
+                                <h3>Phone / Text</h3>
                                 <a href="tel:+19792361958">(979) 236-1958</a>
                             </div>
                         </div>
                         <div class="contact-method">
                             <div class="contact-method-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             </div>
                             <div class="contact-method-text">
-                                <h4>Email</h4>
+                                <h3>Email</h3>
                                 <a href="mailto:info@ecbtx.com">info@ecbtx.com</a>
                             </div>
                         </div>
                         <div class="contact-method">
                             <div class="contact-method-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             </div>
                             <div class="contact-method-text">
-                                <h4>Service Area</h4>
+                                <h3>Service Area</h3>
                                 <p>Texas Hill Country & Beyond</p>
                             </div>
                         </div>
                         <div class="contact-method">
                             <div class="contact-method-icon" style="background: var(--accent);">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div class="contact-method-text">
-                                <h4>Response Time</h4>
+                                <h3>Response Time</h3>
                                 <p>We reply within 24 hours</p>
                             </div>
                         </div>
@@ -1536,7 +1613,7 @@
                     <h3>Request a Free Consultation</h3>
                     <p>Fill out the form and we'll get back to you within one business day.</p>
 
-                    <form id="leadForm" name="lead-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <form id="leadForm" name="lead-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
                         <!-- Hidden field for Netlify form name -->
                         <input type="hidden" name="form-name" value="lead-capture">
                         <!-- Honeypot field for spam protection (hidden) -->
@@ -1545,23 +1622,23 @@
                         </p>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required placeholder="John Smith">
+                                <label for="name">Full Name <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                                <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" placeholder="John Smith">
                             </div>
                             <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="john@county.gov">
+                                <label for="email">Email <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="john@county.gov">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(979) 236-1958">
+                                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(979) 236-1958">
                             </div>
                             <div class="form-group">
                                 <label for="county">County / Organization</label>
-                                <input type="text" id="county" name="county" placeholder="Travis County">
+                                <input type="text" id="county" name="county" autocomplete="organization" placeholder="Travis County">
                             </div>
                         </div>
 
@@ -1585,14 +1662,16 @@
                         <div class="form-submit">
                             <button type="submit" class="btn btn-accent">
                                 <span>Request Consultation</span>
-                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left:8px;"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left:8px;" aria-hidden="true" focusable="false"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                             </button>
                         </div>
 
-                        <div class="form-success" id="formSuccess">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"/></svg>
                             <span><strong>Thank you!</strong> We'll be in touch within 24 hours.</span>
                         </div>
+
+                        <div id="formError" class="form-error-message" role="alert" aria-live="assertive"></div>
                     </form>
                 </div>
             </div>
@@ -1600,18 +1679,20 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="cta-section">
+    <section class="cta-section" aria-labelledby="cta-heading">
         <div class="container">
-            <h2 class="fade-in">Already a Client?</h2>
+            <h2 id="cta-heading" class="fade-in">Already a Client?</h2>
             <p class="fade-in">Access your records and manage your account through our secure client portal.</p>
             <div class="cta-buttons fade-in">
-                <a href="https://react.ecbtx.com" class="btn btn-white btn-lg">Client Portal Login</a>
+                <a href="https://react.ecbtx.com" class="btn btn-white btn-lg" target="_blank" rel="noopener noreferrer">Client Portal Login <span class="sr-only">(opens in new tab)</span></a>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer>
+    <footer aria-label="Site footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -1648,19 +1729,28 @@
     <script>
         // Mobile menu toggle
         function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+            var navLinks = document.getElementById('navLinks');
+            var menuBtn = document.querySelector('.mobile-menu-btn');
+            navLinks.classList.toggle('active');
+            var isExpanded = navLinks.classList.contains('active');
+            menuBtn.setAttribute('aria-expanded', isExpanded.toString());
         }
 
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+        // Scroll animations (respect reduced motion preference)
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
+        } else {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+            document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+        }
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1715,7 +1805,12 @@
                     }
                 } catch (error) {
                     console.error('Form error:', error);
-                    alert('There was an error. Please call us at (979) 236-1958 or email info@ecbtx.com');
+                    var errorDiv = document.getElementById('formError');
+                    if (errorDiv) {
+                        errorDiv.textContent = 'There was an error submitting the form. Please call us at (979) 236-1958 or email info@ecbtx.com';
+                        errorDiv.classList.add('show');
+                        setTimeout(function() { errorDiv.classList.remove('show'); }, 10000);
+                    }
                 } finally {
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
