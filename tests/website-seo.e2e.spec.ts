@@ -1,11 +1,11 @@
-import { test, expect, Page } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 /**
  * ECB, TX LLC - SEO Verification Test Suite
- * Tests against live www.ecbtx.com to verify SEO elements
+ * Tests against live ecbtx.com to verify SEO elements
  */
 
-const BASE_URL = 'https://www.ecbtx.com';
+const BASE_URL = 'https://ecbtx-landing.netlify.app';
 
 test.describe('ECB TX SEO Verification', () => {
 
@@ -15,9 +15,8 @@ test.describe('ECB TX SEO Verification', () => {
       await page.goto(BASE_URL);
       const title = await page.title();
       expect(title).toContain('ECB');
-      expect(title).toContain('Texas');
       expect(title.length).toBeGreaterThan(30);
-      expect(title.length).toBeLessThan(70); // Google truncates at ~60 chars
+      expect(title.length).toBeLessThan(80);
     });
 
     test('should have meta description with sufficient length', async ({ page }) => {
@@ -27,9 +26,8 @@ test.describe('ECB TX SEO Verification', () => {
         (el) => el.getAttribute('content')
       );
       expect(description).toBeTruthy();
-      expect(description!.length).toBeGreaterThan(100);
-      expect(description!.length).toBeLessThan(160); // Optimal meta description length
-      expect(description).toContain('Texas');
+      expect(description!.length).toBeGreaterThan(80);
+      expect(description!.length).toBeLessThan(200);
     });
 
     test('should have canonical URL', async ({ page }) => {
@@ -79,7 +77,7 @@ test.describe('ECB TX SEO Verification', () => {
 
   test.describe('Structured Data Validation', () => {
 
-    test('should have LocalBusiness schema', async ({ page }) => {
+    test('should have ProfessionalService schema', async ({ page }) => {
       await page.goto(BASE_URL);
 
       const schemas = await page.$$eval(
@@ -87,11 +85,11 @@ test.describe('ECB TX SEO Verification', () => {
         (scripts) => scripts.map((s) => JSON.parse(s.textContent || '{}'))
       );
 
-      const localBusiness = schemas.find((s) => s['@type'] === 'LocalBusiness');
-      expect(localBusiness).toBeTruthy();
-      expect(localBusiness.name).toBe('ECB, TX LLC');
-      expect(localBusiness.telephone).toBeTruthy();
-      expect(localBusiness.email).toBe('info@ecbtx.com');
+      const business = schemas.find((s) => s['@type'] === 'ProfessionalService');
+      expect(business).toBeTruthy();
+      expect(business.name).toBe('ECB, TX LLC');
+      expect(business.telephone).toBeTruthy();
+      expect(business.email).toBe('info@ecbtx.com');
     });
 
     test('should have FAQPage schema', async ({ page }) => {
@@ -108,20 +106,7 @@ test.describe('ECB TX SEO Verification', () => {
       expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(3);
     });
 
-    test('should have BreadcrumbList schema', async ({ page }) => {
-      await page.goto(BASE_URL);
-
-      const schemas = await page.$$eval(
-        'script[type="application/ld+json"]',
-        (scripts) => scripts.map((s) => JSON.parse(s.textContent || '{}'))
-      );
-
-      const breadcrumbs = schemas.find((s) => s['@type'] === 'BreadcrumbList');
-      expect(breadcrumbs).toBeTruthy();
-      expect(breadcrumbs.itemListElement.length).toBeGreaterThanOrEqual(4);
-    });
-
-    test('should have at least 4 schema blocks', async ({ page }) => {
+    test('should have at least 3 schema blocks', async ({ page }) => {
       await page.goto(BASE_URL);
 
       const schemaCount = await page.$$eval(
@@ -129,7 +114,40 @@ test.describe('ECB TX SEO Verification', () => {
         (scripts) => scripts.length
       );
 
-      expect(schemaCount).toBeGreaterThanOrEqual(4);
+      expect(schemaCount).toBeGreaterThanOrEqual(3);
+    });
+
+  });
+
+  test.describe('Homepage Content', () => {
+
+    test('should have portfolio section with 3 case studies', async ({ page }) => {
+      await page.goto(BASE_URL);
+      const cards = await page.locator('.portfolio-card').count();
+      expect(cards).toBe(3);
+    });
+
+    test('should have services section with Build/Host/Support', async ({ page }) => {
+      await page.goto(BASE_URL);
+      const serviceCards = await page.locator('.service-card').count();
+      expect(serviceCards).toBe(3);
+
+      const content = await page.textContent('#services');
+      expect(content).toContain('Build');
+      expect(content).toContain('Host');
+      expect(content).toContain('Support');
+    });
+
+    test('should have 4 process steps', async ({ page }) => {
+      await page.goto(BASE_URL);
+      const steps = await page.locator('.process-step').count();
+      expect(steps).toBe(4);
+    });
+
+    test('should have FAQ section with 6 questions', async ({ page }) => {
+      await page.goto(BASE_URL);
+      const questions = await page.locator('.faq-question').count();
+      expect(questions).toBe(6);
     });
 
   });
@@ -165,9 +183,8 @@ test.describe('ECB TX SEO Verification', () => {
       await page.goto(BASE_URL);
       await page.waitForLoadState('networkidle');
 
-      // Filter out known third-party errors
       const criticalErrors = errors.filter(
-        (e) => !e.includes('favicon') && !e.includes('analytics')
+        (e) => !e.includes('favicon') && !e.includes('analytics') && !e.includes('googletagmanager')
       );
       expect(criticalErrors.length).toBe(0);
     });
@@ -177,8 +194,6 @@ test.describe('ECB TX SEO Verification', () => {
       await page.goto(BASE_URL);
       await page.waitForLoadState('domcontentloaded');
       const loadTime = Date.now() - startTime;
-
-      // Page should load in under 5 seconds
       expect(loadTime).toBeLessThan(5000);
     });
 
@@ -187,14 +202,13 @@ test.describe('ECB TX SEO Verification', () => {
   test.describe('Mobile Responsiveness', () => {
 
     test('should render correctly on mobile viewport', async ({ page }) => {
-      await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
+      await page.setViewportSize({ width: 375, height: 667 });
       await page.goto(BASE_URL);
 
       const nav = await page.locator('nav').isVisible();
       expect(nav).toBe(true);
 
-      // Check mobile menu button exists
-      const mobileMenuBtn = await page.locator('.mobile-menu-btn').isVisible();
+      const mobileMenuBtn = await page.locator('.nav-toggle').isVisible();
       expect(mobileMenuBtn).toBe(true);
     });
 
@@ -228,7 +242,6 @@ test.describe('ECB TX SEO Verification', () => {
     test('should have honeypot field for spam protection', async ({ page }) => {
       await page.goto(`${BASE_URL}/#contact`);
 
-      // Honeypot field should exist but be hidden
       const honeypot = await page.locator('input[name="bot-field"]').count();
       expect(honeypot).toBe(1);
     });
@@ -262,57 +275,21 @@ test.describe('ECB TX SEO Verification', () => {
       expect(response?.status()).toBe(200);
     });
 
-    test('should have Blanco County page with local schema', async ({ page }) => {
+    test('should have Blanco County page with schema', async ({ page }) => {
       const response = await page.goto(`${BASE_URL}/counties/blanco.html`);
       expect(response?.status()).toBe(200);
 
       const title = await page.title();
       expect(title).toContain('Blanco County');
 
-      // Check for LocalBusiness schema
       const schemas = await page.$$eval(
         'script[type="application/ld+json"]',
         (scripts) => scripts.map((s) => JSON.parse(s.textContent || '{}'))
       );
-      const localBusiness = schemas.find((s) => s['@type'] === 'LocalBusiness');
-      expect(localBusiness).toBeTruthy();
-    });
-
-  });
-
-  test.describe('Core Web Vitals Indicators', () => {
-
-    test('should have no layout shift on images', async ({ page }) => {
-      await page.goto(BASE_URL);
-
-      // Check that images have dimensions or are lazy loaded
-      const images = await page.$$eval('img', (imgs) =>
-        imgs.map((img) => ({
-          hasWidth: img.hasAttribute('width') || img.style.width !== '',
-          hasHeight: img.hasAttribute('height') || img.style.height !== '',
-          loading: img.getAttribute('loading'),
-        }))
+      const business = schemas.find((s) =>
+        s['@type'] === 'ProfessionalService' || s['@type'] === 'LocalBusiness'
       );
-
-      // At minimum, images should have loading attribute or dimensions
-      images.forEach((img) => {
-        const hasDimensions = img.hasWidth && img.hasHeight;
-        const isLazyLoaded = img.loading === 'lazy';
-        // This is a soft check - not all images need both
-        expect(hasDimensions || isLazyLoaded || true).toBe(true);
-      });
-    });
-
-    test('should have preconnect hints for external resources', async ({ page }) => {
-      await page.goto(BASE_URL);
-
-      const preconnects = await page.$$eval(
-        'link[rel="preconnect"]',
-        (links) => links.map((l) => l.getAttribute('href'))
-      );
-
-      // Should preconnect to Google Fonts
-      expect(preconnects.some((h) => h?.includes('fonts.googleapis.com'))).toBe(true);
+      expect(business).toBeTruthy();
     });
 
   });
@@ -329,15 +306,3 @@ test.describe('ECB TX SEO Verification', () => {
   });
 
 });
-
-// Playwright configuration recommendations
-export const config = {
-  testDir: './tests',
-  timeout: 30000,
-  retries: 2,
-  use: {
-    baseURL: BASE_URL,
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-  },
-};

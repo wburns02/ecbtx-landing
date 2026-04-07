@@ -3,489 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECB, TX LLC | Custom Business Platforms — Built, Hosted & Managed</title>
+    <meta name="description" content="We build custom software platforms for small and mid-size businesses. From CRMs to operations dashboards, we design, develop, host, and manage the tools that run your business.">
+    <meta name="keywords" content="custom business platforms, custom CRM, managed software, Texas software development, small business software, operations platform">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ecbtx.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ecbtx.com/">
+    <meta property="og:title" content="ECB, TX LLC | Custom Business Platforms">
+    <meta property="og:description" content="We build, host, and manage custom software platforms for small and mid-size businesses.">
+    <meta property="og:image" content="https://ecbtx.com/images/og-image.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="ECB, TX LLC">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ECB, TX LLC | Custom Business Platforms">
+    <meta name="twitter:description" content="We build, host, and manage custom software platforms for small and mid-size businesses.">
+    <meta name="twitter:image" content="https://ecbtx.com/images/og-image.webp">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Texas">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.webp">
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S1JN9P8YT"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2S1JN9P8YT');
-
-      // Custom event tracking for SEO conversions
-      document.addEventListener('DOMContentLoaded', function() {
-        // Track phone clicks
-        document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
-          link.addEventListener('click', function() {
-            gtag('event', 'phone_click', {
-              'event_category': 'contact',
-              'event_label': this.href
-            });
-          });
-        });
-
-        // Track email clicks
-        document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
-          link.addEventListener('click', function() {
-            gtag('event', 'email_click', {
-              'event_category': 'contact',
-              'event_label': this.href
-            });
-          });
-        });
-
-        // Track scroll depth
-        let scrollDepths = [25, 50, 75, 100];
-        let scrolledDepths = [];
-        window.addEventListener('scroll', function() {
-          let scrollPercent = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
-          scrollDepths.forEach(function(depth) {
-            if (scrollPercent >= depth && !scrolledDepths.includes(depth)) {
-              scrolledDepths.push(depth);
-              gtag('event', 'scroll_depth', {
-                'event_category': 'engagement',
-                'event_label': depth + '%'
-              });
-            }
-          });
-        });
-      });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2S1JN9P8YT');
     </script>
 
-    <title>ECB, TX LLC | Texas Document Digitization & Septic Records</title>
-    <meta name="description" content="Professional document digitization for Texas septic systems & OSSF permits. Transform paper records into searchable digital archives. 18+ years IT experience.">
-
-    <!-- SEO Meta Tags -->
-    <meta name="keywords" content="septic records digitization, Texas OSSF records, document scanning Texas, septic permit digitization, records management Texas, Hill Country document services, county records digitization, septic system documentation, paper to digital conversion, Texas septic compliance">
-    <meta name="author" content="ECB, TX LLC">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <link rel="canonical" href="https://ecbtx.com/">
-
-    <!-- Geographic/Local SEO -->
-    <meta name="geo.region" content="US-TX">
-    <meta name="geo.placename" content="Texas Hill Country">
-    <meta name="geo.position" content="30.2672;-97.7431">
-    <meta name="ICBM" content="30.2672, -97.7431">
-
-    <!-- Theme and Branding -->
-    <meta name="theme-color" content="#1e40af">
-    <meta name="msapplication-TileColor" content="#1e40af">
-    <meta name="application-name" content="ECB, TX LLC">
-    <meta name="apple-mobile-web-app-title" content="ECB, TX LLC">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:site_name" content="ECB, TX LLC">
-    <meta property="og:title" content="ECB, TX LLC | Digitizing Texas Septic Records">
-    <meta property="og:description" content="Professional document digitization and records management for Texas septic systems. Transform decades of paper records into searchable digital archives.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ecbtx.com/">
-    <meta property="og:image" content="https://ecbtx.com/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="ECB, TX LLC - Digitizing Texas Septic Records">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ECB, TX LLC | Digitizing Texas Septic Records">
-    <meta name="twitter:description" content="Professional document digitization for Texas septic systems. 18+ years IT expertise meets septic industry knowledge.">
-    <meta name="twitter:image" content="https://ecbtx.com/images/og-image.jpg">
-    <meta name="twitter:image:alt" content="ECB, TX LLC - Document Digitization Services">
-
-    <!-- Structured Data: LocalBusiness + Service -->
+    <!-- JSON-LD: ProfessionalService -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://ecbtx.com/#business",
-      "name": "ECB, TX LLC",
-      "alternateName": "ECB Texas",
-      "description": "Professional document digitization and records management services specializing in Texas septic system (OSSF) records. We transform paper permits, inspections, and compliance documents into searchable digital archives.",
-      "url": "https://ecbtx.com",
-      "logo": "https://ecbtx.com/images/logo.jpg",
-      "image": "https://ecbtx.com/images/og-image.jpg",
-      "telephone": "+1-979-236-1958",
-      "email": "info@ecbtx.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 30.2672,
-        "longitude": -97.7431
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Texas",
-        "sameAs": "https://en.wikipedia.org/wiki/Texas"
-      },
-      "priceRange": "$$",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "sameAs": [],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Document Digitization Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Document Digitization",
-              "description": "High-speed scanning of paper records with professional OCR for searchable PDFs"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Secure Database Solutions",
-              "description": "Centralized, searchable database with cloud backup and role-based access control"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Compliance & Training",
-              "description": "Full compliance with Texas records retention laws and ongoing team training"
-            }
-          }
-        ]
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Will Burns",
-        "jobTitle": "Founder",
-        "description": "18+ years IT experience combined with septic industry expertise"
-      },
-      "foundingDate": "2025",
-      "knowsAbout": [
-        "Document Digitization",
-        "Records Management",
-        "Septic Systems",
-        "OSSF Permits",
-        "Texas Environmental Compliance",
-        "OCR Technology",
-        "Cloud Storage Solutions"
-      ]
-    }
-    </script>
-
-    <!-- Structured Data: WebSite with SearchAction -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ECB, TX LLC",
-      "url": "https://ecbtx.com",
-      "description": "Professional document digitization services for Texas septic records",
-      "publisher": {
-        "@type": "Organization",
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
         "name": "ECB, TX LLC",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://ecbtx.com/images/logo.jpg"
-        }
-      }
+        "description": "Custom software platforms for small and mid-size businesses. We design, build, host, and manage CRMs, operations dashboards, and business tools.",
+        "url": "https://ecbtx.com",
+        "telephone": "+19792361958",
+        "email": "info@ecbtx.com",
+        "areaServed": {
+            "@type": "State",
+            "name": "Texas"
+        },
+        "serviceType": ["Custom Software Development", "Managed Hosting", "Business Platform Development"],
+        "knowsAbout": ["CRM Development", "Operations Platforms", "Healthcare Software", "Business Analytics"]
     }
     </script>
 
-    <!-- Structured Data: BreadcrumbList -->
+    <!-- JSON-LD: WebSite -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ecbtx.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://ecbtx.com/#services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "About",
-          "item": "https://ecbtx.com/#about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "FAQ",
-          "item": "https://ecbtx.com/#faq"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Contact",
-          "item": "https://ecbtx.com/#contact"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Privacy Policy",
-          "item": "https://ecbtx.com/privacy.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Terms of Service",
-          "item": "https://ecbtx.com/terms.html"
-        }
-      ]
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ECB, TX LLC",
+        "url": "https://ecbtx.com"
     }
     </script>
 
-    <!-- Structured Data: FAQPage (improves rich snippets) -->
+    <!-- JSON-LD: FAQPage -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is document digitization?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Document digitization is the process of converting paper records into searchable digital files. We use high-speed scanners and OCR (Optical Character Recognition) technology to transform your physical documents into organized, searchable PDFs that can be accessed from any device, backed up to the cloud, and searched instantly by keyword."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does document scanning cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Document scanning costs vary based on volume, document condition, and required processing. For most Texas county projects, pricing ranges from $0.05 to $0.15 per page depending on complexity. We provide free, no-obligation quotes after reviewing your specific needs. Contact us at (979) 236-1958 for a custom estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of documents can you digitize?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We digitize all types of documents including septic/OSSF permits, government records, legal documents, medical records (HIPAA compliant), business contracts, historical archives, maps, engineering drawings, and more. We handle everything from standard letter-size to large-format documents up to 36 inches wide."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does document digitization take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Turnaround time depends on project size and complexity. A typical county records project of 10,000-50,000 pages takes 2-4 weeks. Rush services are available for urgent needs. We provide detailed timelines in our project proposals and keep you updated throughout the process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my data secure during digitization?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. We use AES-256 encryption for all digital files, secure facilities with access controls, and all staff sign confidentiality agreements. Your documents never leave our secure chain of custody. We comply with Texas records management laws and can meet HIPAA, CJIS, and other regulatory requirements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you serve my county in Texas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! We serve all 254 Texas counties with a focus on the Hill Country and Central Texas regions including Blanco, Hays, Travis, Williamson, Gillespie, Kendall, Comal, Kerr, Bastrop, and surrounding areas. We can pick up and deliver documents or work on-site at your facility."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is an OSSF permit and why digitize it?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "OSSF (On-Site Sewage Facility) permits are Texas regulatory documents for septic systems. Many counties have decades of paper OSSF records that are difficult to search and at risk of damage. Digitizing these records makes permit lookups instant, enables compliance tracking, and protects irreplaceable historical data."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you integrate with our existing software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we can format digitized documents to integrate with most document management systems, GIS platforms, and county software. We export in standard formats (PDF, TIFF, CSV) and can customize metadata fields to match your existing database structure. Our team has 18+ years of IT experience."
-          }
-        }
-      ]
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What kind of platforms do you build?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We build custom CRMs, operations dashboards, tracking systems, and workflow tools tailored to how your business actually operates. Every platform is built from scratch for your specific needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does a custom platform cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Projects typically range from $5,000 to $25,000 for the initial build, with ongoing hosting and support starting at $500/month. We scope every project individually based on complexity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to build a platform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most platforms launch in 4 to 8 weeks. We work in focused sprints and keep you involved at every step so there are no surprises."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens after launch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We host, monitor, and maintain your platform on managed cloud infrastructure. You get ongoing support, regular updates, and new features as your business grows."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I own the software you build?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You own everything we build for you. The code, the data, all of it. If you ever want to move to your own infrastructure, we help you make that transition."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What industries do you work with?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We have built platforms for M&A advisory firms, craft breweries, healthcare consultancies, federal supply companies, and field service operations. If your business runs on processes, we can build a platform for it."
+                }
+            }
+        ]
     }
     </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* ==========================================
-           CSS RESET & BASE
-           ========================================== */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
         :root {
             --primary: #1e40af;
             --primary-light: #3b82f6;
             --primary-dark: #1e3a8a;
             --accent: #059669;
             --accent-light: #10b981;
-            --dark: #1f2937;
-            --gray-600: #4b5563;
-            --gray-400: #9ca3af;
-            --light: #f9fafb;
-            --white: #ffffff;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-dark: #0f172a;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--dark);
-            background: var(--white);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        a { text-decoration: none; color: inherit; }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-light); }
+
         img { max-width: 100%; height: auto; }
 
         .container {
-            max-width: 1200px;
+            max-width: 1120px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ==========================================
-           NAVIGATION
-           ========================================== */
-        nav {
-            position: fixed;
+        /* Nav */
+        .nav {
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            z-index: 100;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
         }
 
-        .nav-inner {
+        .nav .container {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-            height: 72px;
         }
 
-        .logo {
+        .nav-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-
-        .logo img {
-            height: 44px;
-            width: auto;
-        }
-
-        .logo-text {
+            gap: 10px;
             font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary);
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .nav-logo img {
+            height: 36px;
+            width: auto;
+            border-radius: 6px;
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
             gap: 32px;
+            list-style: none;
         }
 
         .nav-links a {
+            color: var(--text-light);
+            font-size: 0.95rem;
             font-weight: 500;
-            color: var(--gray-600);
             transition: color 0.2s;
         }
 
         .nav-links a:hover { color: var(--primary); }
 
-        .nav-links a.btn-primary {
-            color: white;
-        }
-
-        .nav-links a.btn-primary:hover {
-            color: white;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-light);
-            transform: translateY(-1px);
-        }
-
-        .btn-accent {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-accent:hover {
-            background: var(--accent-light);
-            transform: translateY(-1px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-lg {
-            padding: 16px 32px;
-            font-size: 1.1rem;
-        }
-
-        /* Mobile menu */
-        .mobile-menu-btn {
+        .nav-toggle {
             display: none;
             background: none;
             border: none;
@@ -493,1339 +229,881 @@
             padding: 8px;
         }
 
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 72px;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 24px;
-                gap: 16px;
-                border-bottom: 1px solid rgba(0,0,0,0.1);
-            }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px 0;
+            transition: 0.3s;
         }
 
-        /* ==========================================
-           HERO SECTION
-           ========================================== */
+        /* Hero */
         .hero {
-            padding: 200px 0 100px; /* Extra space for top banner + nav */
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.15);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 100px 0 80px;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: 3rem;
             font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
 
         .hero p {
             font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            line-height: 1.7;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 36px;
         }
 
-        .hero-buttons {
+        .hero-ctas {
             display: flex;
             gap: 16px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .hero-buttons .btn {
-            min-width: 180px;
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
         }
 
-        /* ==========================================
-           STATS BAR
-           ========================================== */
-        .stats-bar {
-            background: var(--white);
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+        .btn-primary:hover {
+            background: var(--accent-light);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        /* Stats Bar */
+        .stats {
+            background: var(--primary);
+            padding: 24px 0;
+        }
+
+        .stats .container {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
             text-align: center;
+            color: #fff;
         }
 
-        @media (max-width: 768px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
         }
 
-        .stat-item h3 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 4px;
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-top: 2px;
         }
 
-        .stat-item p {
-            color: var(--gray-600);
-            font-weight: 500;
-        }
-
-        /* ==========================================
-           PROBLEM/SOLUTION
-           ========================================== */
-        .problem-section {
-            padding: 100px 0;
-            background: var(--light);
+        /* Section Shared */
+        .section {
+            padding: 80px 0;
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
+            margin-bottom: 48px;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--dark);
-            margin-bottom: 16px;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
         }
 
         .section-header p {
-            font-size: 1.15rem;
-            color: var(--gray-600);
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        @media (max-width: 900px) {
-            .problem-grid { grid-template-columns: 1fr; }
-        }
-
-        .problem-list {
-            list-style: none;
-        }
-
-        .problem-list li {
-            display: flex;
-            gap: 16px;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-        }
-
-        .problem-list li:last-child { border-bottom: none; }
-
-        .problem-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .problem-icon svg {
-            width: 24px;
-            height: 24px;
-            stroke: white;
-        }
-
-        .problem-text h4 {
+            color: var(--text-light);
             font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 4px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .problem-text p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
+        .section-alt { background: var(--bg-alt); }
 
-        .solution-card {
-            background: white;
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
-        }
-
-        .solution-card h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--accent);
-        }
-
-        .solution-card p {
-            color: var(--gray-600);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        /* ==========================================
-           SERVICES
-           ========================================== */
-        .services-section {
-            padding: 100px 0;
-        }
-
-        .services-grid {
+        /* Portfolio */
+        .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 28px;
         }
 
-        @media (max-width: 900px) {
-            .services-grid { grid-template-columns: 1fr; }
+        .portfolio-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            transition: box-shadow 0.2s, transform 0.2s;
         }
 
-        .service-card {
-            background: var(--white);
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 16px;
-            padding: 40px 32px;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
-            border-color: var(--primary);
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
-
-        .service-icon svg {
-            width: 32px;
-            height: 32px;
-            stroke: white;
-        }
-
-        .service-card h3 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        /* ==========================================
-           ABOUT / FOUNDER
-           ========================================== */
-        .about-section {
-            padding: 100px 0;
-            background: var(--dark);
-            color: white;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        @media (max-width: 900px) {
-            .about-grid { grid-template-columns: 1fr; }
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 24px;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            opacity: 0.85;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        .about-stat {
-            background: rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .about-stat h3 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--accent-light);
-            margin-bottom: 8px;
-        }
-
-        .about-stat p {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        /* ==========================================
-           CTA SECTION
-           ========================================== */
-        .cta-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--accent) 0%, #047857 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-buttons .btn {
-            min-width: 200px;
-        }
-
-        .btn-white {
-            background: white;
-            color: var(--accent);
-        }
-
-        .btn-white:hover {
-            background: var(--light);
+        .portfolio-card:hover {
+            box-shadow: var(--shadow-lg);
             transform: translateY(-2px);
         }
 
-        /* ==========================================
-           FAQ SECTION - Voice Search Optimized
-           ========================================== */
-        .faq-section {
-            padding: 100px 0;
-            background: white;
+        .portfolio-tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .faq-section .section-header {
-            text-align: center;
-            margin-bottom: 60px;
+        .portfolio-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
-        .faq-section .section-header h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            color: var(--dark);
-            margin-bottom: 15px;
+        .portfolio-problem {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-style: italic;
         }
 
-        .faq-section .section-header p {
-            color: var(--gray-600);
-            font-size: 1.1rem;
+        .portfolio-solution {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
         }
 
-        .faq-grid {
+        .portfolio-features {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .portfolio-features li {
+            background: var(--bg-alt);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--text-light);
+        }
+
+        /* Services */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
 
-        @media (max-width: 768px) {
-            .faq-grid { grid-template-columns: 1fr; }
+        .service-card {
+            text-align: center;
+            padding: 36px 28px;
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: #eff6ff;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .step-number {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 0 auto 16px;
+        }
+
+        .process-step h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* About */
+        .about-content {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .about-content p:first-of-type {
+            font-size: 1.15rem;
+            color: var(--text);
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
         }
 
         .faq-item {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 1px solid var(--border);
         }
 
-        .faq-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+            font-family: inherit;
         }
 
-        .faq-item h3 {
-            font-size: 1.1rem;
-            color: var(--dark);
-            margin-bottom: 12px;
-            line-height: 1.4;
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            transition: transform 0.2s;
+            color: var(--text-light);
+            flex-shrink: 0;
+            margin-left: 16px;
         }
 
-        .faq-item p {
-            color: var(--gray-600);
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 0 20px;
+            color: var(--text-light);
             font-size: 0.95rem;
             line-height: 1.7;
-            margin: 0;
         }
 
-        /* ==========================================
-           LEAD CAPTURE FORM
-           ========================================== */
-        .contact-section {
-            padding: 100px 0;
-            background: var(--light);
+        .faq-item.open .faq-answer {
+            max-height: 300px;
         }
+
+        /* Contact */
+        .contact {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 80px 0;
+        }
+
+        .contact .section-header h2 { color: #fff; }
+        .contact .section-header p { color: #94a3b8; }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            gap: 48px;
             align-items: start;
         }
 
-        @media (max-width: 900px) {
-            .contact-grid { grid-template-columns: 1fr; }
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
-        .contact-info h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 16px;
+            color: #cbd5e1;
         }
 
-        .contact-info p {
-            color: var(--gray-600);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 32px;
-        }
+        .contact-detail a { color: #cbd5e1; }
+        .contact-detail a:hover { color: #fff; }
 
-        .contact-methods {
+        .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
             gap: 16px;
-        }
-
-        .contact-method-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-method-icon svg {
-            width: 24px;
-            height: 24px;
-            stroke: white;
-        }
-
-        .contact-method-text h4 {
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-
-        .contact-method-text p,
-        .contact-method-text a {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        .contact-method-text a:hover {
-            color: var(--primary);
-        }
-
-        .lead-form {
-            background: white;
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
-        }
-
-        .lead-form h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .lead-form > p {
-            color: var(--gray-600);
-            margin-bottom: 32px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
+            font-size: 0.85rem;
             font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
+            margin-bottom: 6px;
+            color: #cbd5e1;
         }
 
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 14px 16px;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            font-size: 1rem;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.95rem;
             font-family: inherit;
-            transition: border-color 0.2s, box-shadow 0.2s;
-            background: white;
+            transition: border-color 0.2s;
         }
 
-        .form-group input:focus-visible,
-        .form-group select:focus-visible,
-        .form-group textarea:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #64748b;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-light);
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        @media (max-width: 500px) {
-            .form-row { grid-template-columns: 1fr; }
-        }
-
-        .form-submit {
-            margin-top: 24px;
-        }
-
-        .form-submit .btn {
-            width: 100%;
-            padding: 16px;
-            font-size: 1.1rem;
-        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
 
         .form-success {
             display: none;
-            background: #d1fae5;
-            border: 1px solid var(--accent);
-            color: #065f46;
-            padding: 16px 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            text-align: center;
+            padding: 32px;
         }
 
-        .form-success.show {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .form-success h3 {
+            color: var(--accent-light);
+            margin-bottom: 8px;
         }
 
-        /* ==========================================
-           FOOTER
-           ========================================== */
-        footer {
-            background: #111827;
-            color: white;
-            padding: 60px 0 30px;
+        .form-success p { color: #94a3b8; }
+
+        /* Footer */
+        .footer {
+            background: #050d1a;
+            padding: 32px 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
-        }
+        .footer a { color: #94a3b8; }
+        .footer a:hover { color: #fff; }
 
+        /* Mobile */
         @media (max-width: 768px) {
-            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                padding: 16px 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow);
+            }
+            .nav-toggle { display: block; }
+
+            .hero { padding: 64px 0 56px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.05rem; }
+
+            .stats .container { gap: 24px; }
+            .stat-value { font-size: 1.2rem; }
+
+            .section { padding: 56px 0; }
+            .section-header h2 { font-size: 1.6rem; }
+
+            .portfolio-grid,
+            .services-grid { grid-template-columns: 1fr; }
+
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .contact-grid { grid-template-columns: 1fr; }
         }
 
-        .footer-brand h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 16px;
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.7rem; }
+            .hero-ctas { flex-direction: column; align-items: center; }
+            .process-steps { grid-template-columns: 1fr; }
         }
 
-        .footer-brand p {
-            color: var(--gray-400);
-            line-height: 1.7;
-        }
-
-        .footer-links h4 {
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: var(--gray-400);
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-bottom p {
-            color: var(--gray-400);
-            font-size: 0.9rem;
-        }
-
-        /* ==========================================
-           ANIMATIONS
-           ========================================== */
+        /* Animations */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* ==========================================
-           ACCESSIBILITY
-           ========================================== */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary);
-            color: var(--white);
-            padding: 8px 16px;
-            z-index: 10000;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 0 0 8px 0;
-            transition: top 0.2s;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-
-        *:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 2px;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .form-error-message {
-            background: #fee2e2;
-            border: 1px solid #ef4444;
-            color: #991b1b;
-            padding: 16px 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            display: none;
-        }
-
-        .form-error-message.show {
-            display: block;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-            .fade-in {
-                opacity: 1 !important;
-                transform: none !important;
-            }
-        }
-
-        /* ==========================================
-           TOP CTA BANNER - UNMISSABLE
-           ========================================== */
-        .top-cta {
-            background: linear-gradient(90deg, var(--accent) 0%, #047857 100%);
-            color: white;
-            padding: 14px 24px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1001;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .top-cta p {
-            font-weight: 600;
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        .top-cta .btn {
-            padding: 10px 24px;
-            background: white;
-            color: #047857;
-            font-weight: 700;
-            border-radius: 6px;
-            animation: pulse 2s infinite;
-        }
-
-        .top-cta .btn:hover {
-            background: var(--light);
-            transform: scale(1.05);
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
-            50% { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
-        }
-
-        .top-cta .phone-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 600;
-            color: white;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .top-cta { padding: 10px 16px; gap: 8px; }
-            .top-cta p { font-size: 0.85rem; }
-            .top-cta .btn { padding: 6px 14px; font-size: 0.85rem; }
-            .top-cta .phone-link { display: none; }
-        }
-
-        /* Adjust nav position for top banner */
-        nav {
-            top: 52px;
-        }
-
-        @media (max-width: 600px) {
-            nav { top: 56px; }
-        }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- TOP CTA BANNER - FIRST THING VISITORS SEE -->
-    <div class="top-cta" role="complementary" aria-label="Special offer">
-        <p>Ready to modernize your records?</p>
-        <a href="#contact" class="btn">Free Consultation</a>
-        <span style="opacity:0.7;">or call</span>
-        <a href="tel:+19792361958" class="phone-link" aria-label="Call ECB TX at (979) 236-1958">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            (979) 236-1958
-        </a>
-    </div>
-
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
-        <div class="container nav-inner">
-            <a href="/" class="logo">
-                <span class="logo-text">ECB, TX LLC</span>
+    <!-- Nav -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="nav-logo" aria-label="ECB TX Home">
+                <img src="/images/logo.webp" alt="ECB TX Logo" width="36" height="36"
+                     onerror="this.onerror=null;this.src='/images/logo.jpg';">
+                ECB, TX
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
-                <a href="https://react.ecbtx.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Client Portal <span class="sr-only">(opens in new tab)</span></a>
-            </div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
-                    <path d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#portfolio" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#process" role="menuitem">How It Works</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <main id="main-content">
-
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content fade-in">
-                <div class="hero-badge">
-                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/></svg>
-                    Serving Texas Hill Country
-                </div>
-                <h1 id="hero-heading">Digitizing Texas Septic Records</h1>
-                <p>Professional document digitization and records management for Texas counties. We bridge 18+ years of IT expertise with real septic industry experience to modernize how Texas manages OSSF records.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-accent btn-lg">Get Started</a>
-                    <a href="https://react.ecbtx.com" class="btn btn-outline btn-lg" style="border-color:white;color:white;" target="_blank" rel="noopener noreferrer">Client Portal <span class="sr-only">(opens in new tab)</span></a>
-                </div>
+            <h1>We Build the Platforms<br>That Run Your Business</h1>
+            <p>Custom software. Hosted and managed. Built for how you actually work.</p>
+            <div class="hero-ctas">
+                <a href="#portfolio" class="btn btn-primary">See Our Work</a>
+                <a href="#contact" class="btn btn-outline">Start a Conversation</a>
             </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="stats-bar" aria-label="Company statistics">
+    <!-- Stats -->
+    <section class="stats" aria-label="Company stats">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <p class="stat-number">18+</p>
-                    <p>Years IT Experience</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <p class="stat-number">TX</p>
-                    <p>Based & Focused</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <p class="stat-number">100%</p>
-                    <p>Compliant</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <p class="stat-number">24/7</p>
-                    <p>Digital Access</p>
-                </div>
+            <div class="stat">
+                <div class="stat-value">3+</div>
+                <div class="stat-label">Industries Served</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">6+</div>
+                <div class="stat-label">Platforms Shipped</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">18+</div>
+                <div class="stat-label">Years in IT</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Managed Hosting</div>
             </div>
         </div>
     </section>
 
-    <!-- Problem/Solution -->
-    <section class="problem-section" aria-labelledby="problem-heading">
+    <!-- Portfolio -->
+    <section class="section section-alt" id="portfolio">
         <div class="container">
-            <div class="section-header fade-in">
-                <h2 id="problem-heading">The Problem We Solve</h2>
-                <p>Texas counties have decades of critical septic records buried in filing cabinets, scattered across offices, and deteriorating over time.</p>
+            <div class="section-header">
+                <h2>Platforms We've Built</h2>
+                <p>Real software solving real problems for real businesses.</p>
             </div>
-            <div class="problem-grid">
-                <ul class="problem-list fade-in">
-                    <li>
-                        <div class="problem-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                        </div>
-                        <div class="problem-text">
-                            <h3>Paper Records Deteriorating</h3>
-                            <p>Decades of permits and inspections fading in filing cabinets</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="problem-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <div class="problem-text">
-                            <h3>Hours to Find Records</h3>
-                            <p>Manual searches waste staff time and frustrate property owners</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="problem-icon">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                        </div>
-                        <div class="problem-text">
-                            <h3>Compliance Risks</h3>
-                            <p>Scattered data makes regulatory compliance difficult</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="solution-card fade-in">
-                    <h3>Our Solution</h3>
-                    <p>We transform your paper chaos into an organized, searchable digital archive. High-speed scanning, professional OCR, secure cloud storage, and full compliance with Texas records retention laws.</p>
-                    <p style="margin-top:20px;"><strong>Find any record in seconds, not hours.</strong></p>
-                </div>
+            <div class="portfolio-grid">
+                <article class="portfolio-card fade-in">
+                    <span class="portfolio-tag">M&amp;A Advisory</span>
+                    <h3>Eminence CRM</h3>
+                    <p class="portfolio-problem">An Austin M&amp;A firm managing deals across spreadsheets and email.</p>
+                    <p class="portfolio-solution">Full pipeline CRM with engagement tracking, buyer management, and document workflows.</p>
+                    <ul class="portfolio-features">
+                        <li>Kanban deal pipeline</li>
+                        <li>7-tab engagement system</li>
+                        <li>AI hub</li>
+                        <li>Buyer database</li>
+                    </ul>
+                </article>
+                <article class="portfolio-card fade-in">
+                    <span class="portfolio-tag">Craft Brewery</span>
+                    <h3>Bearded Hop CRM</h3>
+                    <p class="portfolio-problem">A growing brewery tracking inventory, sales, and production on paper.</p>
+                    <p class="portfolio-solution">21-page operations platform with production dashboard and real-time analytics.</p>
+                    <ul class="portfolio-features">
+                        <li>Production dashboard</li>
+                        <li>Inventory tracking</li>
+                        <li>Sales analytics</li>
+                        <li>6-phase rollout</li>
+                    </ul>
+                </article>
+                <article class="portfolio-card fade-in">
+                    <span class="portfolio-tag">Healthcare / HEDIS</span>
+                    <h3>KDJ Clarity</h3>
+                    <p class="portfolio-problem">A consulting firm manually processing quality measures across thousands of patient records.</p>
+                    <p class="portfolio-solution">OCR-powered ingestion platform with nurse review queues and compliance reporting.</p>
+                    <ul class="portfolio-features">
+                        <li>Automated OCR ingestion</li>
+                        <li>Record review queue</li>
+                        <li>Quality measures</li>
+                        <li>Audit log</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section class="services-section" id="services" aria-labelledby="services-heading">
+    <section class="section" id="services">
         <div class="container">
-            <div class="section-header fade-in">
-                <h2 id="services-heading">What We Offer</h2>
-                <p>Comprehensive records management services tailored for Texas septic system documentation.</p>
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>We don't just build your platform. We run it for you.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--primary)"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                     </div>
-                    <h3>Document Digitization</h3>
-                    <p>High-speed scanning of paper records with professional OCR for searchable PDFs. Quality assured and organized by your preferred schema.</p>
+                    <h3>Build</h3>
+                    <p>We design and develop custom platforms tailored to your operations. No templates, no generic SaaS. Software that fits your business the way you actually run it.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--primary)"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </div>
-                    <h3>Secure Database</h3>
-                    <p>Centralized, searchable database with cloud backup. Role-based access control and full audit trails for compliance.</p>
+                    <h3>Host</h3>
+                    <p>Your platform runs on managed cloud infrastructure with monitoring, backups, and security handled for you. No servers to worry about, no downtime surprises.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <div class="service-icon" aria-hidden="true">
+                        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--primary)"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <h3>Compliance & Support</h3>
-                    <p>Full compliance with Texas records retention laws. Ongoing training and support for your team.</p>
+                    <h3>Support</h3>
+                    <p>Ongoing maintenance, updates, and new features as your business grows. We're your long-term technology partner, not a one-and-done contractor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-alt" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>From first conversation to a platform you rely on every day.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We learn your business, your pain points, and what success looks like.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Design &amp; Build</h3>
+                    <p>We design and develop your platform in focused sprints, with your input at every step.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Launch</h3>
+                    <p>We deploy your platform, train your team, and go live.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Grow</h3>
+                    <p>We host, maintain, and evolve your platform as your business grows.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section class="about-section" id="about" aria-labelledby="about-heading">
+    <section class="section" id="about">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content fade-in">
-                    <h2 id="about-heading">Why ECB, TX LLC?</h2>
-                    <p>After 18 years in IT and a year running a septic company, I saw firsthand the challenges Texas counties face with septic records. Filing cabinets full of decades-old permits. Hours spent searching for a single inspection report.</p>
-                    <p>I founded ECB, TX LLC to bridge my two worlds - bringing modern technology solutions to an industry that deserves better tools. This isn't just about scanning documents. It's about moving the Texas septic industry forward.</p>
+            <div class="section-header">
+                <h2>About ECB, TX</h2>
+            </div>
+            <div class="about-content">
+                <p>We're a Texas-based software shop that builds custom platforms for small and mid-size businesses.</p>
+                <p>With 18+ years in IT and hands-on experience across industries from healthcare to hospitality, we understand the gap between what off-the-shelf software offers and what your business actually needs.</p>
+                <p>We've built platforms for M&amp;A advisory firms, craft breweries, healthcare consultancies, and field service companies. Every one of them started the same way: a business running on spreadsheets, email, and tools that weren't built for them.</p>
+                <p>We build the tools that are.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">What kind of platforms do you build?</button>
+                    <div class="faq-answer" role="region">
+                        <p>We build custom CRMs, operations dashboards, tracking systems, and workflow tools tailored to how your business actually operates. Every platform is built from scratch for your specific needs.</p>
+                    </div>
                 </div>
-                <div class="about-stats fade-in">
-                    <div class="about-stat">
-                        <p class="stat-number" style="color: var(--accent-light);">18+</p>
-                        <p>Years in IT</p>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">How much does a custom platform cost?</button>
+                    <div class="faq-answer" role="region">
+                        <p>Projects typically range from $5,000 to $25,000 for the initial build, with ongoing hosting and support starting at $500/month. We scope every project individually based on complexity.</p>
                     </div>
-                    <div class="about-stat">
-                        <p class="stat-number" style="color: var(--accent-light);">1</p>
-                        <p>Year in Septic</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">How long does it take to build a platform?</button>
+                    <div class="faq-answer" role="region">
+                        <p>Most platforms launch in 4 to 8 weeks. We work in focused sprints and keep you involved at every step so there are no surprises.</p>
                     </div>
-                    <div class="about-stat">
-                        <p class="stat-number" style="color: var(--accent-light);">2</p>
-                        <p>Worlds Combined</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">What happens after launch?</button>
+                    <div class="faq-answer" role="region">
+                        <p>We host, monitor, and maintain your platform on managed cloud infrastructure. You get ongoing support, regular updates, and new features as your business grows. Think of us as your technology partner, not a vendor who disappears after delivery.</p>
                     </div>
-                    <div class="about-stat">
-                        <p class="stat-number" style="color: var(--accent-light);">TX</p>
-                        <p>Native</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Do I own the software you build?</button>
+                    <div class="faq-answer" role="region">
+                        <p>Yes. You own everything we build for you. The code, the data, all of it. If you ever want to move to your own infrastructure, we'll help you make that transition.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">What industries do you work with?</button>
+                    <div class="faq-answer" role="region">
+                        <p>We've built platforms for M&amp;A advisory firms, craft breweries, healthcare consultancies, federal supply companies, and field service operations. If your business runs on processes, we can build a platform for it.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section - Voice Search Optimized -->
-    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <!-- Contact -->
+    <section class="contact" id="contact">
         <div class="container">
-            <div class="section-header fade-in">
-                <h2 id="faq-heading">Frequently Asked Questions</h2>
-                <p>Get answers to common questions about document digitization services</p>
+            <div class="section-header">
+                <h2>Start a Conversation</h2>
+                <p>Tell us about your business and what you're working with today. No pressure, no sales pitch.</p>
             </div>
-
-            <div class="faq-grid fade-in">
-                <!-- Voice search: "What is document digitization?" -->
-                <div class="faq-item">
-                    <h3>What is document digitization?</h3>
-                    <p>Document digitization is the process of converting paper records into searchable digital files. We use high-speed scanners and OCR (Optical Character Recognition) technology to transform your physical documents into organized, searchable PDFs that can be accessed from any device, backed up to the cloud, and searched instantly by keyword.</p>
-                </div>
-
-                <!-- Voice search: "How much does document scanning cost?" -->
-                <div class="faq-item">
-                    <h3>How much does document scanning cost?</h3>
-                    <p>Document scanning costs vary based on volume, document condition, and required processing. For most Texas county projects, pricing ranges from $0.05 to $0.15 per page depending on complexity. We provide free, no-obligation quotes after reviewing your specific needs. Contact us at (979) 236-1958 for a custom estimate.</p>
-                </div>
-
-                <!-- Voice search: "What types of documents can you digitize?" -->
-                <div class="faq-item">
-                    <h3>What types of documents can you digitize?</h3>
-                    <p>We digitize all types of documents including septic/OSSF permits, government records, legal documents, medical records (HIPAA compliant), business contracts, historical archives, maps, engineering drawings, and more. We handle everything from standard letter-size to large-format documents up to 36 inches wide.</p>
-                </div>
-
-                <!-- Voice search: "How long does document digitization take?" -->
-                <div class="faq-item">
-                    <h3>How long does document digitization take?</h3>
-                    <p>Turnaround time depends on project size and complexity. A typical county records project of 10,000-50,000 pages takes 2-4 weeks. Rush services are available for urgent needs. We provide detailed timelines in our project proposals and keep you updated throughout the process.</p>
-                </div>
-
-                <!-- Voice search: "Is my data secure during digitization?" -->
-                <div class="faq-item">
-                    <h3>Is my data secure during digitization?</h3>
-                    <p>Absolutely. We use AES-256 encryption for all digital files, secure facilities with access controls, and all staff sign confidentiality agreements. Your documents never leave our secure chain of custody. We comply with Texas records management laws and can meet HIPAA, CJIS, and other regulatory requirements.</p>
-                </div>
-
-                <!-- Voice search: "Do you serve my county in Texas?" -->
-                <div class="faq-item">
-                    <h3>Do you serve my county in Texas?</h3>
-                    <p>Yes! We serve all 254 Texas counties with a focus on the Hill Country and Central Texas regions including Blanco, Hays, Travis, Williamson, Gillespie, Kendall, Comal, Kerr, Bastrop, and surrounding areas. We can pick up and deliver documents or work on-site at your facility.</p>
-                </div>
-
-                <!-- Voice search: "What is an OSSF permit?" -->
-                <div class="faq-item">
-                    <h3>What is an OSSF permit and why digitize it?</h3>
-                    <p>OSSF (On-Site Sewage Facility) permits are Texas regulatory documents for septic systems. Many counties have decades of paper OSSF records that are difficult to search and at risk of damage. Digitizing these records makes permit lookups instant, enables compliance tracking, and protects irreplaceable historical data.</p>
-                </div>
-
-                <!-- Voice search: "Can you integrate with our existing software?" -->
-                <div class="faq-item">
-                    <h3>Can you integrate with our existing software?</h3>
-                    <p>Yes, we can format digitized documents to integrate with most document management systems, GIS platforms, and county software. We export in standard formats (PDF, TIFF, CSV) and can customize metadata fields to match your existing database structure. Our team has 18+ years of IT experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact / Lead Capture -->
-    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
-        <div class="container">
             <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <h2 id="contact-heading">Let's Talk About Your Records</h2>
-                    <p>Ready to modernize your county's septic records? Schedule a free consultation to discuss your needs and get a custom quote.</p>
-
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <h3>Phone / Text</h3>
-                                <a href="tel:+19792361958">(979) 236-1958</a>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <h3>Email</h3>
-                                <a href="mailto:info@ecbtx.com">info@ecbtx.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <h3>Service Area</h3>
-                                <p>Texas Hill Country & Beyond</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-method-icon" style="background: var(--accent);">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </div>
-                            <div class="contact-method-text">
-                                <h3>Response Time</h3>
-                                <p>We reply within 24 hours</p>
-                            </div>
-                        </div>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-detail">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <a href="tel:+19792361958" id="phoneLink">(979) 236-1958</a>
+                    </div>
+                    <div class="contact-detail">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <a href="mailto:info@ecbtx.com" id="emailLink">info@ecbtx.com</a>
+                    </div>
+                    <div class="contact-detail">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Texas</span>
                     </div>
                 </div>
-
-                <div class="lead-form fade-in">
-                    <h3>Request a Free Consultation</h3>
-                    <p>Fill out the form and we'll get back to you within one business day.</p>
-
-                    <form id="leadForm" name="lead-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-                        <!-- Hidden field for Netlify form name -->
+                <div>
+                    <form class="contact-form" id="contactForm" name="lead-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="lead-capture">
-                        <!-- Honeypot field for spam protection (hidden) -->
-                        <p style="display:none;">
-                            <label>Don't fill this out: <input name="bot-field"></label>
-                        </p>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
-                                <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" placeholder="John Smith">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email <span aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
-                                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="john@county.gov">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(979) 236-1958">
-                            </div>
-                            <div class="form-group">
-                                <label for="county">County / Organization</label>
-                                <input type="text" id="county" name="county" autocomplete="organization" placeholder="Travis County">
-                            </div>
-                        </div>
-
+                        <div style="display:none"><input name="bot-field"></div>
                         <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service...</option>
-                                <option value="digitization">Document Digitization</option>
-                                <option value="database">Secure Database Solutions</option>
-                                <option value="compliance">Compliance & Training</option>
-                                <option value="consultation">General Consultation</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="message">Tell us about your project</label>
-                            <textarea id="message" name="message" placeholder="How many records? What's your timeline? Any specific challenges?"></textarea>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@company.com" required>
                         </div>
-
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-accent">
-                                <span>Request Consultation</span>
-                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left:8px;" aria-hidden="true" focusable="false"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </button>
+                        <div class="form-group">
+                            <label for="business">What does your business do?</label>
+                            <input type="text" id="business" name="business" placeholder="e.g. Craft brewery, consulting firm, field services...">
                         </div>
-
-                        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 13l4 4L19 7"/></svg>
-                            <span><strong>Thank you!</strong> We'll be in touch within 24 hours.</span>
+                        <div class="form-group">
+                            <label for="message">What are you working with today?</label>
+                            <textarea id="message" name="message" placeholder="Spreadsheets, email, an old system that's falling apart... tell us about it." rows="4"></textarea>
                         </div>
-
-                        <div id="formError" class="form-error-message" role="alert" aria-live="assertive"></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
                     </form>
+                    <div class="form-success" id="formSuccess">
+                        <h3>Message Sent</h3>
+                        <p>We'll get back to you within one business day.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-section" aria-labelledby="cta-heading">
-        <div class="container">
-            <h2 id="cta-heading" class="fade-in">Already a Client?</h2>
-            <p class="fade-in">Access your records and manage your account through our secure client portal.</p>
-            <div class="cta-buttons fade-in">
-                <a href="https://react.ecbtx.com" class="btn btn-white btn-lg" target="_blank" rel="noopener noreferrer">Client Portal Login <span class="sr-only">(opens in new tab)</span></a>
-            </div>
-        </div>
-    </section>
-
-    </main>
 
     <!-- Footer -->
-    <footer aria-label="Site footer">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>ECB, TX LLC</h3>
-                    <p>Professional document digitization and records management for Texas septic system records. Bridging technology and industry expertise.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://react.ecbtx.com" target="_blank" rel="noopener noreferrer">Client Portal <span class="sr-only">(opens in new tab)</span></a></li>
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:info@ecbtx.com">info@ecbtx.com</a></li>
-                        <li>Texas Hill Country</li>
-                        <li>Serving all Texas counties</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ECB, TX LLC. All rights reserved.</p>
-                <p>Your data is handled with care and in compliance with Texas law.</p>
-            </div>
+            <p>&copy; 2026 ECB, TX LLC. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | <a href="/counties/">Service Areas</a></p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            var navLinks = document.getElementById('navLinks');
-            var menuBtn = document.querySelector('.mobile-menu-btn');
-            navLinks.classList.toggle('active');
-            var isExpanded = navLinks.classList.contains('active');
-            menuBtn.setAttribute('aria-expanded', isExpanded.toString());
-        }
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', open);
+        });
 
-        // Scroll animations (respect reduced motion preference)
-        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (prefersReducedMotion) {
-            document.querySelectorAll('.fade-in').forEach(function(el) { el.classList.add('visible'); });
-        } else {
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
 
-            document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu
-                    document.getElementById('navLinks').classList.remove('active');
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
                 }
             });
         });
 
-        // Lead capture form handling (Netlify Forms)
-        const leadForm = document.getElementById('leadForm');
-        const formSuccess = document.getElementById('formSuccess');
-
-        if (leadForm) {
-            leadForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-
-                const submitBtn = leadForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<span>Sending...</span>';
-                submitBtn.disabled = true;
-
-                try {
-                    const formData = new FormData(leadForm);
-
-                    // Submit to Netlify Forms
-                    const response = await fetch('/', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams(formData).toString()
-                    });
-
-                    if (response.ok) {
-                        // Track form submission in GA4
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'form_submit', {
-                                'event_category': 'lead_generation',
-                                'event_label': 'lead_capture_form',
-                                'value': 1
-                            });
-                        }
-                        leadForm.reset();
-                        formSuccess.classList.add('show');
-                        setTimeout(() => formSuccess.classList.remove('show'), 8000);
-                    } else {
-                        throw new Error('Submission failed');
-                    }
-                } catch (error) {
-                    console.error('Form error:', error);
-                    var errorDiv = document.getElementById('formError');
-                    if (errorDiv) {
-                        errorDiv.textContent = 'There was an error submitting the form. Please call us at (979) 236-1958 or email info@ecbtx.com';
-                        errorDiv.classList.add('show');
-                        setTimeout(function() { errorDiv.classList.remove('show'); }, 10000);
-                    }
-                } finally {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
+        // Scroll fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form handling
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('formSuccess');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            try {
+                const data = new FormData(form);
+                await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(data).toString()
+                });
+                form.style.display = 'none';
+                success.style.display = 'block';
+                gtag('event', 'form_submission', { event_category: 'lead', event_label: 'contact_form' });
+            } catch (err) {
+                alert('Something went wrong. Please call us at (979) 236-1958.');
+            }
+        });
+
+        // GA4 click tracking
+        document.getElementById('phoneLink').addEventListener('click', () => {
+            gtag('event', 'phone_click', { event_category: 'contact' });
+        });
+        document.getElementById('emailLink').addEventListener('click', () => {
+            gtag('event', 'email_click', { event_category: 'contact' });
+        });
+
+        // Scroll depth tracking
+        let scrollMarkers = [25, 50, 75, 100];
+        window.addEventListener('scroll', () => {
+            const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            scrollMarkers = scrollMarkers.filter(m => {
+                if (pct >= m) {
+                    gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: m + '%' });
+                    return false;
+                }
+                return true;
+            });
+        });
     </script>
+
 </body>
 </html>

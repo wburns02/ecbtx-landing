@@ -1,5 +1,5 @@
 # robots.txt for ecbtx.com
-# ECB, TX LLC - Document Digitization Services
+# ECB, TX LLC - Custom Business Platforms
 
 User-agent: *
 Allow: /

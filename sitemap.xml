@@ -8,13 +8,13 @@
   <!-- Homepage -->
   <url>
     <loc>https://ecbtx.com/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ecbtx.com/images/og-image.jpg</image:loc>
-      <image:title>ECB, TX LLC - Digitizing Texas Septic Records</image:title>
-      <image:caption>Professional document digitization services for Texas counties</image:caption>
+      <image:title>ECB, TX LLC - Custom Business Platforms</image:title>
+      <image:caption>We build, host, and manage custom software platforms for small and mid-size businesses</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://ecbtx.com/images/logo.jpg</image:loc>
@@ -24,29 +24,36 @@
 
   <!-- Main Sections -->
   <url>
+    <loc>https://ecbtx.com/#portfolio</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://ecbtx.com/#services</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/#about</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/#faq</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/#contact</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -69,7 +76,7 @@
   <!-- Service Areas Index -->
   <url>
     <loc>https://ecbtx.com/counties/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,56 +84,56 @@
   <!-- Hill Country Counties -->
   <url>
     <loc>https://ecbtx.com/counties/blanco.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/gillespie.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/kendall.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/kerr.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/bandera.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/llano.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/comal.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/burnet.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -134,49 +141,49 @@
   <!-- Central Texas Counties -->
   <url>
     <loc>https://ecbtx.com/counties/travis.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/williamson.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/hays.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/bastrop.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/caldwell.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/lee.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ecbtx.com/counties/bell.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
