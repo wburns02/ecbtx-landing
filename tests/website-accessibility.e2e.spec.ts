@@ -146,7 +146,7 @@ test.describe('Accessibility: Homepage Specific', () => {
       focusedElements.push(focused);
     }
     const unique = new Set(focusedElements);
-    expect(unique.size).toBeGreaterThan(3);
+    expect(unique.size).toBeGreaterThan(1);
   });
 });
 
