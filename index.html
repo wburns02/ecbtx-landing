@@ -364,19 +364,21 @@
 
         .portfolio-card {
             background: var(--bg);
-            border: 1px solid var(--border);
+            border: 1px solid #bfc6d1;
+            border-left: 4px solid var(--primary);
             border-radius: var(--radius);
             padding: 32px 28px;
-            transition: box-shadow 0.2s, transform 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
             cursor: pointer;
             display: flex;
             flex-direction: column;
         }
 
         .portfolio-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary-light);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.16), 0 4px 14px rgba(0,0,0,0.10);
+            transform: translateY(-4px);
+            border-left-color: var(--primary-dark);
         }
 
         .portfolio-cta {
@@ -820,9 +822,9 @@
                 <p>Real software solving real problems for real businesses.</p>
             </div>
             <div class="portfolio-grid">
-                <article class="portfolio-card fade-in" onclick="location.href='#contact'" role="link" tabindex="0" aria-label="Eminence CRM case study — click to get in touch">
+                <article class="portfolio-card fade-in" onclick="location.href='#contact'" role="link" tabindex="0" aria-label="M&A Advisory platform case study — click to get in touch">
                     <span class="portfolio-tag">M&amp;A Advisory</span>
-                    <h3>Eminence CRM</h3>
+                    <h3>Deal Pipeline Platform</h3>
                     <p class="portfolio-problem">An Austin M&amp;A firm managing deals across spreadsheets and email.</p>
                     <p class="portfolio-solution">Full pipeline CRM with engagement tracking, buyer management, and document workflows.</p>
                     <ul class="portfolio-features">
@@ -833,9 +835,9 @@
                     </ul>
                     <div class="portfolio-cta">Build something like this <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
                 </article>
-                <article class="portfolio-card fade-in" onclick="location.href='#contact'" role="link" tabindex="0" aria-label="Bearded Hop CRM case study — click to get in touch">
+                <article class="portfolio-card fade-in" onclick="location.href='#contact'" role="link" tabindex="0" aria-label="Craft Brewery platform case study — click to get in touch">
                     <span class="portfolio-tag">Craft Brewery</span>
-                    <h3>Bearded Hop CRM</h3>
+                    <h3>Brewery Operations Platform</h3>
                     <p class="portfolio-problem">A growing brewery tracking inventory, sales, and production on paper.</p>
                     <p class="portfolio-solution">21-page operations platform with production dashboard and real-time analytics.</p>
                     <ul class="portfolio-features">
@@ -846,9 +848,9 @@
                     </ul>
                     <div class="portfolio-cta">Build something like this <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
                 </article>
-                <article class="portfolio-card fade-in" onclick="location.href='#contact'" role="link" tabindex="0" aria-label="KDJ Clarity case study — click to get in touch">
+                <article class="portfolio-card fade-in" onclick="location.href='#contact'" role="link" tabindex="0" aria-label="Healthcare platform case study — click to get in touch">
                     <span class="portfolio-tag">Healthcare / HEDIS</span>
-                    <h3>KDJ Clarity</h3>
+                    <h3>Quality Measures Platform</h3>
                     <p class="portfolio-problem">A consulting firm manually processing quality measures across thousands of patient records.</p>
                     <p class="portfolio-solution">OCR-powered ingestion platform with nurse review queues and compliance reporting.</p>
                     <ul class="portfolio-features">
